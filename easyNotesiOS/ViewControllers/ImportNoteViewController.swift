@@ -12,6 +12,7 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
 
     
     @IBOutlet weak var myImg: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
