@@ -16,6 +16,7 @@
 		BD952E8A20CF606B005BD858 /* easyNotesiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E8920CF606B005BD858 /* easyNotesiOSTests.swift */; };
 		BD952E9520CF606B005BD858 /* easyNotesiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E9420CF606B005BD858 /* easyNotesiOSUITests.swift */; };
 		BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952EA420CF60FD005BD858 /* CustomButton.swift */; };
+		BD952EA920CF6732005BD858 /* ImportNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952EA820CF6732005BD858 /* ImportNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BD952E9420CF606B005BD858 /* easyNotesiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = easyNotesiOSUITests.swift; sourceTree = "<group>"; };
 		BD952E9620CF606B005BD858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD952EA420CF60FD005BD858 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		BD952EA820CF6732005BD858 /* ImportNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		BD952EA220CF609C005BD858 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD952EA820CF6732005BD858 /* ImportNoteViewController.swift */,
 				BD952E7420CF6069005BD858 /* FirstViewController.swift */,
 				BD952E7620CF6069005BD858 /* SecondViewController.swift */,
 			);
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD952EA920CF6732005BD858 /* ImportNoteViewController.swift in Sources */,
 				BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */,
 				BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */,
 				BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */,
