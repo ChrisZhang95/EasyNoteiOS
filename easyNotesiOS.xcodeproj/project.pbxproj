@@ -15,6 +15,7 @@
 		BD952E7F20CF606B005BD858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD952E7D20CF606B005BD858 /* LaunchScreen.storyboard */; };
 		BD952E8A20CF606B005BD858 /* easyNotesiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E8920CF606B005BD858 /* easyNotesiOSTests.swift */; };
 		BD952E9520CF606B005BD858 /* easyNotesiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E9420CF606B005BD858 /* easyNotesiOSUITests.swift */; };
+		BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952EA420CF60FD005BD858 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BD952E9020CF606B005BD858 /* easyNotesiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = easyNotesiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD952E9420CF606B005BD858 /* easyNotesiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = easyNotesiOSUITests.swift; sourceTree = "<group>"; };
 		BD952E9620CF606B005BD858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD952EA420CF60FD005BD858 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		BD952E7120CF6069005BD858 /* easyNotesiOS */ = {
 			isa = PBXGroup;
 			children = (
+				BD952EA320CF60C4005BD858 /* CustomControls */,
+				BD952EA220CF609C005BD858 /* ViewControllers */,
 				BD952E7220CF6069005BD858 /* AppDelegate.swift */,
-				BD952E7420CF6069005BD858 /* FirstViewController.swift */,
-				BD952E7620CF6069005BD858 /* SecondViewController.swift */,
 				BD952E7820CF6069005BD858 /* Main.storyboard */,
 				BD952E7B20CF606B005BD858 /* Assets.xcassets */,
 				BD952E7D20CF606B005BD858 /* LaunchScreen.storyboard */,
@@ -126,6 +128,23 @@
 				BD952E9620CF606B005BD858 /* Info.plist */,
 			);
 			path = easyNotesiOSUITests;
+			sourceTree = "<group>";
+		};
+		BD952EA220CF609C005BD858 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD952E7420CF6069005BD858 /* FirstViewController.swift */,
+				BD952E7620CF6069005BD858 /* SecondViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD952EA320CF60C4005BD858 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				BD952EA420CF60FD005BD858 /* CustomButton.swift */,
+			);
+			path = CustomControls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */,
 				BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */,
 				BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */,
 				BD952E7520CF6069005BD858 /* FirstViewController.swift in Sources */,
