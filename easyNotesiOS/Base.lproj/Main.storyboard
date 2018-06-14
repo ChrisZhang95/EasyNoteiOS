@@ -75,16 +75,30 @@
             </objects>
             <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
         </scene>
-        <!--View Controller-->
+        <!--Take New Note View Controller-->
         <scene sceneID="kbF-iP-Cam">
             <objects>
-                <viewController id="61m-IR-Ewc" sceneMemberID="viewController">
+                <viewController id="61m-IR-Ewc" customClass="TakeNewNoteViewController" customModule="easyNotesiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hQ4-o4-8YM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-zc-e5j">
+                                <rect key="frame" x="0.0" y="56.5" width="375" height="554"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sUF-zc-e5j" firstAttribute="centerY" secondItem="hQ4-o4-8YM" secondAttribute="centerY" id="QVW-KD-AUH"/>
+                            <constraint firstItem="sUF-zc-e5j" firstAttribute="centerX" secondItem="hQ4-o4-8YM" secondAttribute="centerX" id="WwU-h3-fNk"/>
+                            <constraint firstItem="sUF-zc-e5j" firstAttribute="width" secondItem="Ptd-w5-1Kp" secondAttribute="width" id="pBt-tZ-e4w"/>
+                            <constraint firstItem="sUF-zc-e5j" firstAttribute="height" secondItem="Ptd-w5-1Kp" secondAttribute="height" id="qKG-0G-a4y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ptd-w5-1Kp"/>
                     </view>
+                    <connections>
+                        <outlet property="myImg" destination="sUF-zc-e5j" id="nVY-cx-whG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tak-V1-PMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +112,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JsW-2V-bf2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JsW-2V-bf2">
                                 <rect key="frame" x="0.0" y="56.5" width="375" height="554"/>
                                 <gestureRecognizers/>
                             </imageView>

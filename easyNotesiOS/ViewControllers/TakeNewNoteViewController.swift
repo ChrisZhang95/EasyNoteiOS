@@ -1,33 +1,31 @@
 //
-//  ImportNoteViewController.swift
-//  easyNoteiOS
+//  TakeNewNoteViewController.swift
+//  easyNotesiOS
 //
-//  Created by Chris Zhang on 2018-06-10.
+//  Created by Chris Zhang on 2018-06-14.
 //  Copyright © 2018 Chris Zhang. All rights reserved.
 //
 
 import UIKit
 
-class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    
     @IBOutlet weak var myImg: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Create UIImagePickerController on load up
         let image = UIImagePickerController()
         image.delegate = self
-        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        image.sourceType = UIImagePickerControllerSourceType.camera
         image.allowsEditing = true
-        
+
         //Present UIImagePickerController on UI
         self.present(image, animated: true){
             //After is is complete
         }
     }
-
+    
     //Gets called after the image is picked
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
@@ -36,18 +34,11 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
         else{
             //Error message
         }
-        
+
         self.dismiss(animated: true, completion: nil)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
 
-    
     /*
     // MARK: - Navigation
 

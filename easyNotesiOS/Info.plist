@@ -62,6 +62,8 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We need to access your photo library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need to access your camera</string>
 	<key>FacebookAppID</key>
 	<string>199532397344496</string>
 	<key>FacebookDisplayName</key>
