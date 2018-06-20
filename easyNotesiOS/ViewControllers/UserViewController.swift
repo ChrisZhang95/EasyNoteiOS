@@ -26,6 +26,17 @@ class UserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+        switch result {
+        case .failed(let error):
+            print(error)
+        case .cancelled:
+            print("User cancelled login.")
+        case .success( _, _, _):
+            print("Logged in")
+            
+        }
+    }
 
     /*
     // MARK: - Navigation

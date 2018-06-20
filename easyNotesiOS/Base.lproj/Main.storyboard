@@ -200,27 +200,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vY-1b-Tco">
                                 <rect key="frame" x="56.5" y="236.5" width="262.5" height="194.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rap-eA-62N" customClass="CustumButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="144.5" width="262.5" height="30"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Proceed">
-                                            <color key="titleColor" red="0.23133905439999999" green="0.23133905439999999" blue="0.23133905439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="customButton" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="49e-Tb-3d3" kind="presentation" identifier="menu" id="gij-dS-fh5"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="Rap-eA-62N" firstAttribute="width" secondItem="5vY-1b-Tco" secondAttribute="width" id="Fmb-NE-G2u"/>
-                                    <constraint firstAttribute="bottom" secondItem="Rap-eA-62N" secondAttribute="bottom" constant="20" id="Hig-aF-Hm4"/>
-                                    <constraint firstItem="Rap-eA-62N" firstAttribute="centerX" secondItem="5vY-1b-Tco" secondAttribute="centerX" id="fXh-c6-yWU"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -233,7 +213,7 @@
                         <viewLayoutGuide key="safeArea" id="xR1-yH-Jea"/>
                     </view>
                     <connections>
-                        <outlet property="button" destination="Rap-eA-62N" id="opa-mt-fOw"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="menu" id="zQR-8f-g9O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEg-AP-e14" userLabel="First Responder" sceneMemberID="firstResponder"/>
