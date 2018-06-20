@@ -18,7 +18,7 @@ class MainViewController: UIViewController, LoginButtonDelegate {
         super.viewDidLoad()
 
         // Add facebook login button
-        let loginButton = LoginButton(readPermissions: [ .publicProfile, .userFriends])
+        let loginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends])
         loginButton.center = view.center
         loginButton.delegate = self
         view.addSubview(loginButton)
@@ -40,6 +40,15 @@ class MainViewController: UIViewController, LoginButtonDelegate {
             case .cancelled:
             print("User cancelled login.")
             case .success( _, _, _):
+                let connection = GraphRequestConnection()
+//                var request = GraphRequest.init(graphPath: "me")
+//                request.parameters = ["fields":"email,first_name,last_name,picture.width(1000).height(1000),birthday,gender, friendlists"]
+//
+//                connection.add(request, completion: {
+//                    (response, result) in
+//                    print("Facebook graph Result:", result)
+//                })
+//                connection.start()
                 self.performSegue(withIdentifier: "menu", sender: nil) //Segue has to be set to "Present Modally"
             
         }

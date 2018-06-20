@@ -28,6 +28,11 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
 
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
     //Gets called after the image is picked
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
