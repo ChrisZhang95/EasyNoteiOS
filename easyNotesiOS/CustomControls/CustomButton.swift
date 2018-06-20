@@ -14,7 +14,7 @@ class CustumButton: UIButton {
     @IBInspectable var customButton:Bool = false {
         didSet {
             if customButton {
-                layer.cornerRadius = frame.height / 2
+                layer.cornerRadius = frame.height / 4
             }
         }
     }

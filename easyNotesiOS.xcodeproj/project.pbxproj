@@ -21,6 +21,7 @@
 		BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952EA420CF60FD005BD858 /* CustomButton.swift */; };
 		BD952EA920CF6732005BD858 /* ImportNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952EA820CF6732005BD858 /* ImportNoteViewController.swift */; };
 		BDE40ADD20D2B84E00329034 /* TakeNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE40ADC20D2B84E00329034 /* TakeNewNoteViewController.swift */; };
+		BDE40ADF20D2BBAE00329034 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE40ADE20D2BBAE00329034 /* UserViewController.swift */; };
 		F2C5A0EBC07B6FEC63C90B76 /* Pods_easyNotesiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6CAB70F8779E36BBEBDACF /* Pods_easyNotesiOSUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		BD952EA420CF60FD005BD858 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		BD952EA820CF6732005BD858 /* ImportNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportNoteViewController.swift; sourceTree = "<group>"; };
 		BDE40ADC20D2B84E00329034 /* TakeNewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeNewNoteViewController.swift; sourceTree = "<group>"; };
+		BDE40ADE20D2BBAE00329034 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		E7C4A2A7FB186CC2952689CF /* Pods-easyNotesiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyNotesiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-easyNotesiOS/Pods-easyNotesiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +173,7 @@
 				BD952E7620CF6069005BD858 /* SecondViewController.swift */,
 				BD482D1A20D1EA30008762D8 /* MainViewController.swift */,
 				BDE40ADC20D2B84E00329034 /* TakeNewNoteViewController.swift */,
+				BDE40ADE20D2BBAE00329034 /* UserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD952EA920CF6732005BD858 /* ImportNoteViewController.swift in Sources */,
+				BDE40ADF20D2BBAE00329034 /* UserViewController.swift in Sources */,
 				BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */,
 				BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */,
 				BD482D1B20D1EA30008762D8 /* MainViewController.swift in Sources */,
@@ -601,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P99428PPVG;
 				INFOPLIST_FILE = easyNotesiOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,7 +625,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P99428PPVG;
 				INFOPLIST_FILE = easyNotesiOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
