@@ -9,10 +9,13 @@
 import UIKit
 import FacebookLogin
 import FacebookCore
+import FirebaseDatabase
+import FirebaseUI
 
 class MainViewController: UIViewController, LoginButtonDelegate {
 
-    @IBOutlet weak var button: CustumButton!
+    var ref: DatabaseReference!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,23 @@ class MainViewController: UIViewController, LoginButtonDelegate {
         loginButton.delegate = self
         view.addSubview(loginButton)
         
-        if let accessToken = AccessToken.current {
+        //Set up Firebase database
+        ref = Database.database().reference()
+        
+        //ref.child("users").childByAutoId().setValue("Chris")
+        let artist = [
+            "firstName": "Chris",
+            "lastName": "Zhang",
+            "email": "chris.zhang95@hotmail.com"
+        ]
+        
+        ref.child("users").childByAutoId().setValue(artist)
+        
+        //Fetch data from firebase
+        
+        
+        
+        if AccessToken.current != nil {
             // User is logged in, use 'accessToken' here.
             print("Logged in ")
             OperationQueue.main.addOperation {
@@ -31,6 +50,8 @@ class MainViewController: UIViewController, LoginButtonDelegate {
                 self?.performSegue(withIdentifier: "menu", sender: self)
             }
         }
+        
+        
     }
     
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
@@ -40,7 +61,7 @@ class MainViewController: UIViewController, LoginButtonDelegate {
             case .cancelled:
             print("User cancelled login.")
             case .success( _, _, _):
-                let connection = GraphRequestConnection()
+                //let connection = GraphRequestConnection()
 //                var request = GraphRequest.init(graphPath: "me")
 //                request.parameters = ["fields":"email,first_name,last_name,picture.width(1000).height(1000),birthday,gender, friendlists"]
 //
@@ -57,7 +78,6 @@ class MainViewController: UIViewController, LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: LoginButton) {
         showToast(message: "Logged out")
     }
-    
     
     
     
@@ -84,14 +104,4 @@ class MainViewController: UIViewController, LoginButtonDelegate {
             toastLabel.removeFromSuperview()
         })
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

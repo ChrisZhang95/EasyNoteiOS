@@ -20,6 +20,10 @@
 		BD952E9520CF606B005BD858 /* easyNotesiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E9420CF606B005BD858 /* easyNotesiOSUITests.swift */; };
 		BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952EA420CF60FD005BD858 /* CustomButton.swift */; };
 		BD952EA920CF6732005BD858 /* ImportNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952EA820CF6732005BD858 /* ImportNoteViewController.swift */; };
+		BD9F4D5820DEB07B004CE8DD /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9F4D5720DEB07B004CE8DD /* EmailSignUpViewController.swift */; };
+		BD9F4D5A20DEC3D4004CE8DD /* EmailSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9F4D5920DEC3D4004CE8DD /* EmailSignInViewController.swift */; };
+		BD9F4D5C20DED2C8004CE8DD /* SignInMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9F4D5B20DED2C8004CE8DD /* SignInMenuViewController.swift */; };
+		BDC6317120DC679400A19E67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC6317020DC679400A19E67 /* GoogleService-Info.plist */; };
 		BDE40ADD20D2B84E00329034 /* TakeNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE40ADC20D2B84E00329034 /* TakeNewNoteViewController.swift */; };
 		BDE40ADF20D2BBAE00329034 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE40ADE20D2BBAE00329034 /* UserViewController.swift */; };
 		F2C5A0EBC07B6FEC63C90B76 /* Pods_easyNotesiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6CAB70F8779E36BBEBDACF /* Pods_easyNotesiOSUITests.framework */; };
@@ -68,6 +72,10 @@
 		BD952E9620CF606B005BD858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD952EA420CF60FD005BD858 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		BD952EA820CF6732005BD858 /* ImportNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportNoteViewController.swift; sourceTree = "<group>"; };
+		BD9F4D5720DEB07B004CE8DD /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
+		BD9F4D5920DEC3D4004CE8DD /* EmailSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignInViewController.swift; sourceTree = "<group>"; };
+		BD9F4D5B20DED2C8004CE8DD /* SignInMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInMenuViewController.swift; sourceTree = "<group>"; };
+		BDC6317020DC679400A19E67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BDE40ADC20D2B84E00329034 /* TakeNewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeNewNoteViewController.swift; sourceTree = "<group>"; };
 		BDE40ADE20D2BBAE00329034 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		E7C4A2A7FB186CC2952689CF /* Pods-easyNotesiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyNotesiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-easyNotesiOS/Pods-easyNotesiOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 		BD952E7120CF6069005BD858 /* easyNotesiOS */ = {
 			isa = PBXGroup;
 			children = (
+				BDC6317020DC679400A19E67 /* GoogleService-Info.plist */,
 				BD952EA320CF60C4005BD858 /* CustomControls */,
 				BD952EA220CF609C005BD858 /* ViewControllers */,
 				BD952E7220CF6069005BD858 /* AppDelegate.swift */,
@@ -174,6 +183,9 @@
 				BD482D1A20D1EA30008762D8 /* MainViewController.swift */,
 				BDE40ADC20D2B84E00329034 /* TakeNewNoteViewController.swift */,
 				BDE40ADE20D2BBAE00329034 /* UserViewController.swift */,
+				BD9F4D5720DEB07B004CE8DD /* EmailSignUpViewController.swift */,
+				BD9F4D5920DEC3D4004CE8DD /* EmailSignInViewController.swift */,
+				BD9F4D5B20DED2C8004CE8DD /* SignInMenuViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -211,6 +223,7 @@
 				BD952E6C20CF6069005BD858 /* Frameworks */,
 				BD952E6D20CF6069005BD858 /* Resources */,
 				A21BB82FE771E5DDE83E71B5 /* [CP] Embed Pods Frameworks */,
+				9BDB5D757ACE4206AF1BC5FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD952E7F20CF606B005BD858 /* LaunchScreen.storyboard in Resources */,
+				BDC6317120DC679400A19E67 /* GoogleService-Info.plist in Resources */,
 				BD952E7C20CF606B005BD858 /* Assets.xcassets in Resources */,
 				BD952E7A20CF6069005BD858 /* Main.storyboard in Resources */,
 			);
@@ -348,6 +362,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9BDB5D757ACE4206AF1BC5FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-easyNotesiOS/Pods-easyNotesiOS-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-easyNotesiOS/Pods-easyNotesiOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A21BB82FE771E5DDE83E71B5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,22 +402,50 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-easyNotesiOS/Pods-easyNotesiOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -425,8 +499,11 @@
 				BDE40ADF20D2BBAE00329034 /* UserViewController.swift in Sources */,
 				BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */,
 				BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */,
+				BD9F4D5820DEB07B004CE8DD /* EmailSignUpViewController.swift in Sources */,
+				BD9F4D5C20DED2C8004CE8DD /* SignInMenuViewController.swift in Sources */,
 				BD482D1B20D1EA30008762D8 /* MainViewController.swift in Sources */,
 				BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */,
+				BD9F4D5A20DEC3D4004CE8DD /* EmailSignInViewController.swift in Sources */,
 				BD952E7520CF6069005BD858 /* FirstViewController.swift in Sources */,
 				BDE40ADD20D2B84E00329034 /* TakeNewNoteViewController.swift in Sources */,
 			);
