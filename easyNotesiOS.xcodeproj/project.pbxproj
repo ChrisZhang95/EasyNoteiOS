@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0CEA72DC7C177FD714882456 /* Pods_easyNotesiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7618C30693D1125C07901D /* Pods_easyNotesiOS.framework */; };
 		A7B5C2508B99C248977F6053 /* Pods_easyNotesiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434B9309C99C9E992513D006 /* Pods_easyNotesiOSTests.framework */; };
+		BD179A8520DF275C00F4EF5A /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD179A8420DF275C00F4EF5A /* MainPageViewController.swift */; };
 		BD482D1B20D1EA30008762D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482D1A20D1EA30008762D8 /* MainViewController.swift */; };
 		BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7220CF6069005BD858 /* AppDelegate.swift */; };
 		BD952E7520CF6069005BD858 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7420CF6069005BD858 /* FirstViewController.swift */; };
@@ -55,6 +56,7 @@
 		5320E4E55E3976868FAAF507 /* Pods-easyNotesiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyNotesiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-easyNotesiOSTests/Pods-easyNotesiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E54E74E646CA2222FAAA2DC /* Pods-easyNotesiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyNotesiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-easyNotesiOSTests/Pods-easyNotesiOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A0C528C563E03907395B699 /* Pods-easyNotesiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyNotesiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-easyNotesiOS/Pods-easyNotesiOS.release.xcconfig"; sourceTree = "<group>"; };
+		BD179A8420DF275C00F4EF5A /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		BD482D1A20D1EA30008762D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD952E6F20CF6069005BD858 /* easyNotesiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyNotesiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD952E7220CF6069005BD858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				BD9F4D5720DEB07B004CE8DD /* EmailSignUpViewController.swift */,
 				BD9F4D5920DEC3D4004CE8DD /* EmailSignInViewController.swift */,
 				BD9F4D5B20DED2C8004CE8DD /* SignInMenuViewController.swift */,
+				BD179A8420DF275C00F4EF5A /* MainPageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				BDE40ADF20D2BBAE00329034 /* UserViewController.swift in Sources */,
 				BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */,
 				BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */,
+				BD179A8520DF275C00F4EF5A /* MainPageViewController.swift in Sources */,
 				BD9F4D5820DEB07B004CE8DD /* EmailSignUpViewController.swift in Sources */,
 				BD9F4D5C20DED2C8004CE8DD /* SignInMenuViewController.swift in Sources */,
 				BD482D1B20D1EA30008762D8 /* MainViewController.swift in Sources */,

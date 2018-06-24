@@ -14,6 +14,8 @@ class EmailSignInViewController: UIViewController {
     
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var Password: UITextField!
+    
+    //On sign in button click
     @IBAction func signIn(_ sender: Any) {
         guard let email = Email.text else {return}
         guard let password = Password.text else {return}

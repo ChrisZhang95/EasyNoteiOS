@@ -9,8 +9,11 @@
 import UIKit
 import FacebookLogin
 import FacebookCore
+import FirebaseAuth
 
 class SignInMenuViewController: UIViewController, LoginButtonDelegate {
+    
+    //Facebook login callback function
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
         switch result {
         case .failed(let error):
@@ -18,22 +21,37 @@ class SignInMenuViewController: UIViewController, LoginButtonDelegate {
         case .cancelled:
             print("\nUser cancelled login\n")
         case .success( _, _, _):
-            print("\nFacebook user logged out\n")
-            self.performSegue(withIdentifier: "menu", sender: nil) //Segue has to be set to "Present Modally"
+            guard let accessToken = AccessToken.current?.authenticationToken else {return}
+            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
+            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+                if let error = error  {
+                    print("\n" + error.localizedDescription + "\n")
+                    
+                    return
+                }
+                print("\nFacebook user logged out\n")
+                self.performSegue(withIdentifier: "menu", sender: nil) //Segue has to be set to "Present Modally"
+            }
+            
             
         }
     }
     
+    //Facebook logout callback function
     func loginButtonDidLogOut(_ loginButton: LoginButton) {
         print("\nFacebook user logged out\n")
     }
     
 
+    @IBOutlet weak var emailSignUpButton: CustumButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Adding facebook button to the view
         let loginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends])
         loginButton.center = view.center
+        loginButton.frame = CGRect(x: view.frame.width * 0.15, y: emailSignUpButton.frame.origin.y + 60, width: view.frame.width * 0.7, height: emailSignUpButton.frame.height)
         loginButton.delegate = self
         view.addSubview(loginButton)
         

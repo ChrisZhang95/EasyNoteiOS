@@ -1,39 +1,31 @@
 //
-//  UserViewController.swift
+//  MainPageViewController.swift
 //  easyNotesiOS
 //
-//  Created by Chris Zhang on 2018-06-14.
+//  Created by Chris Zhang on 2018-06-23.
 //  Copyright © 2018 Chris Zhang. All rights reserved.
 //
 
 import UIKit
-import FacebookLogin
-import FacebookCore
 import FirebaseAuth
-class UserViewController: UIViewController {
 
-    //On sign out button click
-    @IBAction func signOut(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            print("\nUser signed out\n")
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-        
-        let loginManager = LoginManager()
-        try loginManager.logOut()
-    }
+class MainPageViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if Auth.auth().currentUser != nil {
+            performSegue(withIdentifier: "menu", sender: self)
+        } else {
+            // No user is signed in, do nothing
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
     /*
     // MARK: - Navigation
