@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vww-B7-4aF">
-                                <rect key="frame" x="56" y="222" width="262.5" height="222"/>
+                                <rect key="frame" x="56" y="222" width="263" height="222"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfk-Oc-Ipu" customClass="CustumButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="66.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="67"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Take new note">
                                             <color key="titleColor" red="0.23133905439999999" green="0.23133905439999999" blue="0.23133905439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,7 +36,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWR-ru-tgl" customClass="CustumButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="155.5" width="262.5" height="66.5"/>
+                                        <rect key="frame" x="0.0" y="155" width="263" height="67"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Import from library">
                                             <color key="titleColor" red="0.23133905439999999" green="0.23133905439999999" blue="0.23133905439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,13 +61,22 @@
                                     <constraint firstItem="bWR-ru-tgl" firstAttribute="height" secondItem="vww-B7-4aF" secondAttribute="height" multiplier="0.3" id="xF4-aR-Twx"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tf3-hh-lBZ">
+                                <rect key="frame" x="164" y="510" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="httpRequestButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="rdU-G9-tUW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39744070477702625" green="0.68187938946930859" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="height" secondItem="PQr-Ze-W5v" secondAttribute="height" multiplier="0.4" id="GHu-NX-tBU"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="width" secondItem="PQr-Ze-W5v" secondAttribute="width" multiplier="0.7" id="GPE-RX-WhS"/>
+                            <constraint firstItem="Tf3-hh-lBZ" firstAttribute="top" secondItem="vww-B7-4aF" secondAttribute="bottom" constant="66" id="Vmv-c9-vBL"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="d2V-Sb-1sD"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="hTa-h8-ORN"/>
+                            <constraint firstItem="Tf3-hh-lBZ" firstAttribute="centerX" secondItem="vww-B7-4aF" secondAttribute="centerX" id="uAG-4g-cha"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
