@@ -45,6 +45,12 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func shareButtonClick(_ sender: UIButton) {
+        //Share image
+        let activityController = UIActivityViewController(activityItems: [myImg.image!], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
