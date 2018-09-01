@@ -11,6 +11,7 @@
 		A7B5C2508B99C248977F6053 /* Pods_easyNotesiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434B9309C99C9E992513D006 /* Pods_easyNotesiOSTests.framework */; };
 		BD179A8520DF275C00F4EF5A /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD179A8420DF275C00F4EF5A /* MainPageViewController.swift */; };
 		BD482D1B20D1EA30008762D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482D1A20D1EA30008762D8 /* MainViewController.swift */; };
+		BD5BCDC7213B2286003DE2BE /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5BCDC6213B2286003DE2BE /* HTTPManager.swift */; };
 		BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7220CF6069005BD858 /* AppDelegate.swift */; };
 		BD952E7520CF6069005BD858 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7420CF6069005BD858 /* FirstViewController.swift */; };
 		BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7620CF6069005BD858 /* SecondViewController.swift */; };
@@ -58,6 +59,7 @@
 		9A0C528C563E03907395B699 /* Pods-easyNotesiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyNotesiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-easyNotesiOS/Pods-easyNotesiOS.release.xcconfig"; sourceTree = "<group>"; };
 		BD179A8420DF275C00F4EF5A /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		BD482D1A20D1EA30008762D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BD5BCDC6213B2286003DE2BE /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
 		BD952E6F20CF6069005BD858 /* easyNotesiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyNotesiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD952E7220CF6069005BD858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD952E7420CF6069005BD858 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD5BCDC5213B2269003DE2BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD5BCDC6213B2286003DE2BE /* HTTPManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BD952E6620CF6069005BD858 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +156,7 @@
 		BD952E7120CF6069005BD858 /* easyNotesiOS */ = {
 			isa = PBXGroup;
 			children = (
+				BD5BCDC5213B2269003DE2BE /* Models */,
 				BDC6317020DC679400A19E67 /* GoogleService-Info.plist */,
 				BD952EA320CF60C4005BD858 /* CustomControls */,
 				BD952EA220CF609C005BD858 /* ViewControllers */,
@@ -509,6 +520,7 @@
 				BD9F4D5C20DED2C8004CE8DD /* SignInMenuViewController.swift in Sources */,
 				BD482D1B20D1EA30008762D8 /* MainViewController.swift in Sources */,
 				BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */,
+				BD5BCDC7213B2286003DE2BE /* HTTPManager.swift in Sources */,
 				BD9F4D5A20DEC3D4004CE8DD /* EmailSignInViewController.swift in Sources */,
 				BD952E7520CF6069005BD858 /* FirstViewController.swift in Sources */,
 				BDE40ADD20D2B84E00329034 /* TakeNewNoteViewController.swift in Sources */,
