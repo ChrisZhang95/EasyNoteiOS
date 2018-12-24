@@ -25,10 +25,8 @@ class UserViewController: UIViewController {
         let loginManager = LoginManager()
         try loginManager.logOut()
         
-        let nextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "userSignIn") as! MainPageViewController
-        //self.present(nextViewController, animated: true, completion: nil)
-        self.navigationController?.pushViewController(nextViewController, animated: true)
-        //self.navigationController?.pushViewController(nextViewController, animated: true)
+        let nextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "userSignIn") as! UINavigationController
+        self.present(nextViewController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -70,6 +70,12 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     
+    @IBAction func testButton(_ sender: UIButton) {
+        let manager = HTTPManager.init()
+        manager.postImage(image: myImg.image!)
+    }
+    
+    
     //Function that draws a line
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
 
@@ -109,22 +115,6 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
             lastPoint = currentPoint
         }
     }
-    
-//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        if !swiped {
-//            // draw a single point
-//            drawLineFrom(fromPoint: lastPoint, toPoint: lastPoint)
-//        }
-//
-//        // Merge tempImageView into mainImageView
-//        UIGraphicsBeginImageContext(myImg.frame.size)
-//        myImg.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: .normal, alpha: 1.0)
-//        tempImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: .normal, alpha: opacity)
-//        myImg.image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//
-//        tempImageView.image = nil
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -13,7 +13,8 @@ class MainPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//    self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
         if Auth.auth().currentUser != nil {
             performSegue(withIdentifier: "menu", sender: self)
         } else {

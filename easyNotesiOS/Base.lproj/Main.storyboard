@@ -127,13 +127,22 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDL-0h-ITq">
+                                <rect key="frame" x="164" y="326" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testButton:" destination="TT2-6P-3QL" eventType="touchUpInside" id="UVP-Mc-3Md"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JsW-2V-bf2" firstAttribute="centerY" secondItem="qET-ah-qSb" secondAttribute="centerY" id="6kd-DJ-suf"/>
+                            <constraint firstItem="DDL-0h-ITq" firstAttribute="centerY" secondItem="JsW-2V-bf2" secondAttribute="centerY" id="S8D-dk-WO0"/>
                             <constraint firstItem="JsW-2V-bf2" firstAttribute="width" secondItem="MgZ-mq-I87" secondAttribute="width" id="VVP-m1-AFx"/>
                             <constraint firstItem="JsW-2V-bf2" firstAttribute="centerX" secondItem="qET-ah-qSb" secondAttribute="centerX" id="hAV-Qd-eIj"/>
                             <constraint firstItem="JsW-2V-bf2" firstAttribute="height" secondItem="MgZ-mq-I87" secondAttribute="height" id="jgn-NJ-APZ"/>
+                            <constraint firstItem="DDL-0h-ITq" firstAttribute="centerX" secondItem="JsW-2V-bf2" secondAttribute="centerX" id="rG9-GC-G5S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MgZ-mq-I87"/>
                     </view>
@@ -194,7 +203,7 @@
         <!--Main Page View Controller-->
         <scene sceneID="28v-Sh-XG7">
             <objects>
-                <viewController storyboardIdentifier="userSignIn" id="Ahg-6i-dqr" customClass="MainPageViewController" customModule="easyNotesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ahg-6i-dqr" customClass="MainPageViewController" customModule="easyNotesiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nPu-dW-FQJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -572,7 +581,7 @@
         <!--Navigation Controller-->
         <scene sceneID="oJI-hV-jVl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="thK-BD-fQc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="userSignIn" automaticallyAdjustsScrollViewInsets="NO" id="thK-BD-fQc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mx0-ky-jVj">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
