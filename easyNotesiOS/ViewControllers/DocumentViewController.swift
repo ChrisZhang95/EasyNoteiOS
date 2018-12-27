@@ -10,7 +10,7 @@ import UIKit
 
 class DocumentViewController: UIViewController {
     
-    @IBOutlet weak var documentNameLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
     
     var document: UIDocument?
     
@@ -20,8 +20,13 @@ class DocumentViewController: UIViewController {
         // Access the document
         document?.open(completionHandler: { (success) in
             if success {
-                // Display the content of the document, e.g.:
-                self.documentNameLabel.text = self.document?.fileURL.lastPathComponent
+                do{
+                    self.textView.text = try String(contentsOf: (self.document?.fileURL)!)
+
+                }
+                catch{
+                    
+                }
             } else {
                 // Make sure to handle the failed import appropriately, e.g., by presenting an error message to the user.
             }

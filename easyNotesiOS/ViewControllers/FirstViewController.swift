@@ -12,22 +12,21 @@ class FirstViewController: UIViewController {
 
     //Handles button click, function sends a http request to python machine learning backend server and retrieve a response
     @IBAction func httpRequestButtonClick(_ sender: Any) {
-        //This is the ip address of the computer that flask server is running on. Inside python code, set app.run(host= '<ip_adress>') to the same address
-//        Alamofire.request("http://192.168.0.19:5000/").responseJSON { response in
-//            print("Request: \(String(describing: response.request))")   // original url request
-//            print("Response: \(String(describing: response.response))") // http url response
-//            print("Result: \(response.result)")                         // response serialization result
-//
-//            if let json = response.result.value {
-//                print("JSON: \(json)") // serialized json response
-//            }
-//
-//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                print("Data: \(utf8Text)") // original server data as UTF8 string
-//            }
-//        }
-        let manager = HTTPManager.init()
-        manager.get()
+//        let manager = HTTPManager.init()
+//        manager.get()
+        
+        let file = "\(UUID().uuidString).txt"
+        let contents = "Some text..."
+        
+        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = dir.appendingPathComponent(file)
+        
+        do {
+            try contents.write(to: fileURL, atomically: false, encoding: .utf8)
+        }
+        catch {
+            print("Error: \(error)")
+        }
     }
     
     func httpRequest(){

@@ -11,10 +11,10 @@
 		A7B5C2508B99C248977F6053 /* Pods_easyNotesiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434B9309C99C9E992513D006 /* Pods_easyNotesiOSTests.framework */; };
 		BD179A8520DF275C00F4EF5A /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD179A8420DF275C00F4EF5A /* MainPageViewController.swift */; };
 		BD25105021409229009C035C /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD25104F21409229009C035C /* DocumentViewController.swift */; };
-		BD2510522140923F009C035C /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2510512140923F009C035C /* DocumentBrowserViewController.swift */; };
 		BD251054214092BB009C035C /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD251053214092BB009C035C /* Document.swift */; };
 		BD482D1B20D1EA30008762D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482D1A20D1EA30008762D8 /* MainViewController.swift */; };
 		BD5BCDC7213B2286003DE2BE /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5BCDC6213B2286003DE2BE /* HTTPManager.swift */; };
+		BD71308F21D587FE0033D33E /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71308E21D587FE0033D33E /* DocumentBrowserViewController.swift */; };
 		BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7220CF6069005BD858 /* AppDelegate.swift */; };
 		BD952E7520CF6069005BD858 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7420CF6069005BD858 /* FirstViewController.swift */; };
 		BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7620CF6069005BD858 /* SecondViewController.swift */; };
@@ -62,10 +62,10 @@
 		9A0C528C563E03907395B699 /* Pods-easyNotesiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyNotesiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-easyNotesiOS/Pods-easyNotesiOS.release.xcconfig"; sourceTree = "<group>"; };
 		BD179A8420DF275C00F4EF5A /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		BD25104F21409229009C035C /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
-		BD2510512140923F009C035C /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		BD251053214092BB009C035C /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		BD482D1A20D1EA30008762D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD5BCDC6213B2286003DE2BE /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		BD71308E21D587FE0033D33E /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		BD952E6F20CF6069005BD858 /* easyNotesiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyNotesiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD952E7220CF6069005BD858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD952E7420CF6069005BD858 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 				BD9F4D5B20DED2C8004CE8DD /* SignInMenuViewController.swift */,
 				BD179A8420DF275C00F4EF5A /* MainPageViewController.swift */,
 				BD25104F21409229009C035C /* DocumentViewController.swift */,
-				BD2510512140923F009C035C /* DocumentBrowserViewController.swift */,
+				BD71308E21D587FE0033D33E /* DocumentBrowserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -527,7 +527,6 @@
 				BD179A8520DF275C00F4EF5A /* MainPageViewController.swift in Sources */,
 				BD9F4D5820DEB07B004CE8DD /* EmailSignUpViewController.swift in Sources */,
 				BD9F4D5C20DED2C8004CE8DD /* SignInMenuViewController.swift in Sources */,
-				BD2510522140923F009C035C /* DocumentBrowserViewController.swift in Sources */,
 				BD251054214092BB009C035C /* Document.swift in Sources */,
 				BD482D1B20D1EA30008762D8 /* MainViewController.swift in Sources */,
 				BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */,
@@ -536,6 +535,7 @@
 				BD25105021409229009C035C /* DocumentViewController.swift in Sources */,
 				BD952E7520CF6069005BD858 /* FirstViewController.swift in Sources */,
 				BDE40ADD20D2B84E00329034 /* TakeNewNoteViewController.swift in Sources */,
+				BD71308F21D587FE0033D33E /* DocumentBrowserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
