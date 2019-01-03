@@ -90,13 +90,13 @@
         <!--Take New Note View Controller-->
         <scene sceneID="kbF-iP-Cam">
             <objects>
-                <viewController id="61m-IR-Ewc" customClass="TakeNewNoteViewController" customModule="easyNotesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="61m-IR-Ewc" customClass="TakeNewNoteViewController" customModule="easyNotesiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hQ4-o4-8YM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-zc-e5j">
-                                <rect key="frame" x="0.0" y="56.5" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="32" width="375" height="603"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,7 +109,7 @@
                         <viewLayoutGuide key="safeArea" id="Ptd-w5-1Kp"/>
                     </view>
                     <connections>
-                        <outlet property="myImg" destination="sUF-zc-e5j" id="nVY-cx-whG"/>
+                        <outlet property="myImg" destination="sUF-zc-e5j" id="Ymz-uV-RXM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tak-V1-PMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,17 +119,18 @@
         <!--Import Note View Controller-->
         <scene sceneID="GjJ-Pv-uOy">
             <objects>
-                <viewController id="TT2-6P-3QL" customClass="ImportNoteViewController" customModule="easyNotesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="TT2-6P-3QL" customClass="ImportNoteViewController" customModule="easyNotesiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qET-ah-qSb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JsW-2V-bf2" userLabel="myImg">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JsW-2V-bf2" userLabel="myImg">
+                                <rect key="frame" x="0.0" y="32" width="375" height="603"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDL-0h-ITq">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDL-0h-ITq">
                                 <rect key="frame" x="164" y="326" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="testButton:" destination="TT2-6P-3QL" eventType="touchUpInside" id="UVP-Mc-3Md"/>
@@ -138,12 +139,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JsW-2V-bf2" firstAttribute="centerY" secondItem="qET-ah-qSb" secondAttribute="centerY" id="6kd-DJ-suf"/>
-                            <constraint firstItem="DDL-0h-ITq" firstAttribute="centerY" secondItem="JsW-2V-bf2" secondAttribute="centerY" id="S8D-dk-WO0"/>
-                            <constraint firstItem="JsW-2V-bf2" firstAttribute="width" secondItem="MgZ-mq-I87" secondAttribute="width" id="VVP-m1-AFx"/>
-                            <constraint firstItem="JsW-2V-bf2" firstAttribute="centerX" secondItem="qET-ah-qSb" secondAttribute="centerX" id="hAV-Qd-eIj"/>
-                            <constraint firstItem="JsW-2V-bf2" firstAttribute="height" secondItem="MgZ-mq-I87" secondAttribute="height" id="jgn-NJ-APZ"/>
-                            <constraint firstItem="DDL-0h-ITq" firstAttribute="centerX" secondItem="JsW-2V-bf2" secondAttribute="centerX" id="rG9-GC-G5S"/>
+                            <constraint firstItem="JsW-2V-bf2" firstAttribute="centerX" secondItem="qET-ah-qSb" secondAttribute="centerX" id="Uhz-jU-ZyC"/>
+                            <constraint firstItem="JsW-2V-bf2" firstAttribute="centerY" secondItem="qET-ah-qSb" secondAttribute="centerY" id="rq5-za-zfi"/>
+                            <constraint firstItem="JsW-2V-bf2" firstAttribute="width" secondItem="MgZ-mq-I87" secondAttribute="width" id="sRW-EI-seS"/>
+                            <constraint firstItem="JsW-2V-bf2" firstAttribute="height" secondItem="MgZ-mq-I87" secondAttribute="height" id="vHW-ch-SWy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MgZ-mq-I87"/>
                     </view>

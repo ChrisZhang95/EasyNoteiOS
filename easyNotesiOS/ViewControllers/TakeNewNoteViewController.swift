@@ -11,8 +11,13 @@ import UIKit
 class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var myImg: UIImageView!
+    //var sharedImg: UIImage? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Display share button on top right
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareButtonClick))
         
         // Create UIImagePickerController on load up
         let image = UIImagePickerController()
@@ -22,7 +27,7 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
 
         //Present UIImagePickerController on UI
         self.present(image, animated: true){
-            //After is is complete
+            //After it is complete
         }
     }
     
@@ -30,6 +35,7 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
             myImg.image = image
+            //sharedImg = image
         }
         else{
             //Error message
@@ -43,6 +49,12 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
         _ = navigationController?.popViewController(animated: true)
     }
 
+    //On share button click
+    @objc func shareButtonClick() {
+        //Share image
+        let activityController = UIActivityViewController(activityItems: [myImg.image!], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

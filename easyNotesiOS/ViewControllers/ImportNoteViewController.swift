@@ -26,6 +26,7 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Display share button on top right
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareButtonClick))
         
         // Create UIImagePickerController on load up
@@ -57,6 +58,7 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
         self.dismiss(animated: true, completion: nil)
     }
     
+    //On share button click
     @objc func shareButtonClick() {
         //Share image
         let activityController = UIActivityViewController(activityItems: [myImg.image!], applicationActivities: nil)
