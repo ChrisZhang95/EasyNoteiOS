@@ -14,8 +14,10 @@ class DocumentViewController: UIViewController {
     
     var document: UIDocument?
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationItem.title = self.document?.localizedName;
         
         // Access the document
         document?.open(completionHandler: { (success) in
@@ -32,6 +34,7 @@ class DocumentViewController: UIViewController {
             }
         })
     }
+
     
     @IBAction func dismissDocumentViewController() {
         dismiss(animated: true) {
