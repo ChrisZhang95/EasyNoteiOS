@@ -15,6 +15,8 @@ class HTTPManager {
     This is the ip address of the computer that flask server is running on.
     Inside python code, set app.run(host= '<ip_adress>') to the same address, excluding the port number*/
     var server: String
+    var converTxt: String = "1"
+    var vc: UIViewController? = nil
     
     init() {
         self.server = "http://192.168.0.13:5000/image"
@@ -26,21 +28,21 @@ class HTTPManager {
     }
     
     //Upload image to the server
-    func postImage(image: UIImage){
+    func postImage(image: UIImage) {
         let imageData = UIImageJPEGRepresentation(image, 0.9)!
-        
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 multipartFormData.append(imageData, withName: "image", fileName: "image.jpeg", mimeType: "image/jpeg")
-        },
+            },
+            
             to: server,
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
-                        print("Request: \(String(describing: response.request))")   // original url request
-                        print("Response: \(String(describing: response.response))") // http url response
-                        print("Result: \(response.result)")                         // response serialization result
+                        //print("Request: \(String(describing: response.request))")   // original url request
+                        //print("Response: \(String(describing: response.response))") // http url response
+                        //print("Result: \(response.result)")                         // response serialization result
                         
                         if let json = response.result.value {
                             print("JSON: \(json)") // serialized json response
@@ -48,13 +50,23 @@ class HTTPManager {
                         
                         if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                             print("Data: \(utf8Text)") // original server data as UTF8 string
+                            //Toast.show(message: utf8Text, controller: self.vc!)
+                            
+                            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                            let textViewController = storyBoard.instantiateViewController(withIdentifier: "textView") as! TextViewViewController
+                            textViewController.text = utf8Text
+                            self.vc?.navigationController?.pushViewController(textViewController, animated: true)
                         }
+                        
+                        
                     }
                 case .failure(let encodingError):
                     print(encodingError)
+                    Toast.show(message: "Error!", controller: self.vc!)
                 }
-        }
+            }
         )
+        
     }
     
     

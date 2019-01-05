@@ -49,6 +49,11 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
         _ = navigationController?.popViewController(animated: true)
     }
 
+    @IBAction func convertText(_ sender: Any) {
+        let manager = HTTPManager.init()
+        manager.postImage(image: myImg.image!)
+    }
+    
     //On share button click
     @objc func shareButtonClick() {
         //Share image

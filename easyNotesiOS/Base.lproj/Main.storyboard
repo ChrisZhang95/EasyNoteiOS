@@ -62,22 +62,13 @@
                                     <constraint firstItem="bWR-ru-tgl" firstAttribute="height" secondItem="vww-B7-4aF" secondAttribute="height" multiplier="0.3" id="xF4-aR-Twx"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tf3-hh-lBZ">
-                                <rect key="frame" x="164" y="510" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="httpRequestButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="rdU-G9-tUW"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39744070477702625" green="0.68187938946930859" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="height" secondItem="PQr-Ze-W5v" secondAttribute="height" multiplier="0.4" id="GHu-NX-tBU"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="width" secondItem="PQr-Ze-W5v" secondAttribute="width" multiplier="0.7" id="GPE-RX-WhS"/>
-                            <constraint firstItem="Tf3-hh-lBZ" firstAttribute="top" secondItem="vww-B7-4aF" secondAttribute="bottom" constant="66" id="Vmv-c9-vBL"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="d2V-Sb-1sD"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="hTa-h8-ORN"/>
-                            <constraint firstItem="Tf3-hh-lBZ" firstAttribute="centerX" secondItem="vww-B7-4aF" secondAttribute="centerX" id="uAG-4g-cha"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -98,13 +89,28 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-zc-e5j">
                                 <rect key="frame" x="0.0" y="32" width="375" height="603"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x57-3a-LLT" customClass="CustumButton" customModule="easyNotesiOS" customModuleProvider="target">
+                                <rect key="frame" x="159.5" y="635" width="55" height="30"/>
+                                <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="customButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="convertText:" destination="61m-IR-Ewc" eventType="touchUpInside" id="wXD-mX-bb9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="centerY" secondItem="hQ4-o4-8YM" secondAttribute="centerY" id="QVW-KD-AUH"/>
+                            <constraint firstItem="x57-3a-LLT" firstAttribute="centerX" secondItem="hQ4-o4-8YM" secondAttribute="centerX" id="U8n-kh-Aac"/>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="centerX" secondItem="hQ4-o4-8YM" secondAttribute="centerX" id="WwU-h3-fNk"/>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="width" secondItem="Ptd-w5-1Kp" secondAttribute="width" id="pBt-tZ-e4w"/>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="height" secondItem="Ptd-w5-1Kp" secondAttribute="height" id="qKG-0G-a4y"/>
+                            <constraint firstAttribute="bottom" secondItem="x57-3a-LLT" secondAttribute="bottom" constant="2" id="yEp-K8-uBz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ptd-w5-1Kp"/>
                     </view>
@@ -115,6 +121,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tak-V1-PMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3310" y="-852"/>
+        </scene>
+        <!--Text View View Controller-->
+        <scene sceneID="K2k-tM-gaG">
+            <objects>
+                <viewController storyboardIdentifier="textView" id="STM-r1-yOw" customClass="TextViewViewController" customModule="easyNotesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Sn-Hr-9Dg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZXa-SU-nK1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZXa-SU-nK1" firstAttribute="leading" secondItem="aW5-8D-vyD" secondAttribute="leading" id="0nH-et-16K"/>
+                            <constraint firstItem="ZXa-SU-nK1" firstAttribute="top" secondItem="aW5-8D-vyD" secondAttribute="top" id="BDV-Sy-XlJ"/>
+                            <constraint firstItem="ZXa-SU-nK1" firstAttribute="bottom" secondItem="aW5-8D-vyD" secondAttribute="bottom" id="WPz-Sk-nqz"/>
+                            <constraint firstItem="ZXa-SU-nK1" firstAttribute="trailing" secondItem="aW5-8D-vyD" secondAttribute="trailing" id="wJq-Ze-3pS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aW5-8D-vyD"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="ZXa-SU-nK1" id="UDo-Id-2ep"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObF-k9-Gmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4376.8000000000002" y="-799.2503748125938"/>
         </scene>
         <!--Import Note View Controller-->
         <scene sceneID="GjJ-Pv-uOy">
@@ -128,14 +167,44 @@
                                 <rect key="frame" x="0.0" y="32" width="375" height="603"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDL-0h-ITq">
-                                <rect key="frame" x="164" y="326" width="46" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2uJ-nX-jCD">
+                                <rect key="frame" x="160" y="637" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="testButton:" destination="TT2-6P-3QL" eventType="touchUpInside" id="UVP-Mc-3Md"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZWk-27-WEe">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fUr-5f-S0Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f9u-bK-z8t">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afx-0C-NT6" customClass="CustumButton" customModule="easyNotesiOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
+                                                                <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Convert">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="customButton" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="convertText:" destination="TT2-6P-3QL" eventType="touchUpInside" id="U3e-7d-HG2"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="Afx-0C-NT6" secondAttribute="bottom" constant="2" id="RMV-xg-y3h"/>
+                                                            <constraint firstItem="Afx-0C-NT6" firstAttribute="centerX" secondItem="f9u-bK-z8t" secondAttribute="centerX" id="Vrp-Yr-NIa"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

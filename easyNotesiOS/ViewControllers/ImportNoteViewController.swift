@@ -65,58 +65,59 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
         present(activityController, animated: true, completion: nil)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        swiped = false
-        if let touch = touches.first {
-            lastPoint = touch.location(in: self.view)
-        }
-    }
-    
-    @IBAction func testButton(_ sender: UIButton) {
+    //Convert text by sending http request to server
+    @IBAction func convertText(_ sender: Any) {
         let manager = HTTPManager.init()
+        manager.vc = self
         manager.postImage(image: myImg.image!)
-    }
-    
-    
-    //Function that draws a line
-    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
-
-        // 1
-        UIGraphicsBeginImageContext(view.frame.size)
-        let context = UIGraphicsGetCurrentContext()
-        myImg.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
-
-        // 2
-        context?.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
-        context?.addLine(to: CGPoint(x: toPoint.x, y: toPoint.y))
-
-        // 3
-        context!.setLineCap(.round)
-        context!.setLineWidth(brushWidth)
-        context!.setBlendMode(.normal)
-        context?.setStrokeColor(red:1, green: 1, blue: 1, alpha:1)
-
-        // 4
-        context!.strokePath()
-
-        // 5
-        myImg.image = UIGraphicsGetImageFromCurrentImageContext()
-        myImg.alpha = opacity
-        UIGraphicsEndImageContext()
-
-    }
-
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // 6
-        swiped = true
-        if let touch = touches.first {
-            let currentPoint = touch.location(in: view)
-            drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
-            
-            // 7
-            lastPoint = currentPoint
         }
-    }
+//Drawing lines on image
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        swiped = false
+//        if let touch = touches.first {
+//            lastPoint = touch.location(in: self.view)
+//        }
+//    }
+//
+//    //Function that draws a line
+//    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
+//
+//        // 1
+//        UIGraphicsBeginImageContext(view.frame.size)
+//        let context = UIGraphicsGetCurrentContext()
+//        myImg.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+//
+//        // 2
+//        context?.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
+//        context?.addLine(to: CGPoint(x: toPoint.x, y: toPoint.y))
+//
+//        // 3
+//        context!.setLineCap(.round)
+//        context!.setLineWidth(brushWidth)
+//        context!.setBlendMode(.normal)
+//        context?.setStrokeColor(red:1, green: 1, blue: 1, alpha:1)
+//
+//        // 4
+//        context!.strokePath()
+//
+//        // 5
+//        myImg.image = UIGraphicsGetImageFromCurrentImageContext()
+//        myImg.alpha = opacity
+//        UIGraphicsEndImageContext()
+//
+//    }
+//
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        // 6
+//        swiped = true
+//        if let touch = touches.first {
+//            let currentPoint = touch.location(in: view)
+//            drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
+//
+//            // 7
+//            lastPoint = currentPoint
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

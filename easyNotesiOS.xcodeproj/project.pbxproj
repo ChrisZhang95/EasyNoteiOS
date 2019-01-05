@@ -14,6 +14,8 @@
 		BD251054214092BB009C035C /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD251053214092BB009C035C /* Document.swift */; };
 		BD482D1B20D1EA30008762D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482D1A20D1EA30008762D8 /* MainViewController.swift */; };
 		BD5BCDC7213B2286003DE2BE /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5BCDC6213B2286003DE2BE /* HTTPManager.swift */; };
+		BD6CE99E21E154DE00AE07F9 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6CE99D21E154DE00AE07F9 /* Toast.swift */; };
+		BD6CE9A021E1688D00AE07F9 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6CE99F21E1688D00AE07F9 /* TextViewViewController.swift */; };
 		BD71308F21D587FE0033D33E /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71308E21D587FE0033D33E /* DocumentBrowserViewController.swift */; };
 		BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7220CF6069005BD858 /* AppDelegate.swift */; };
 		BD952E7520CF6069005BD858 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7420CF6069005BD858 /* FirstViewController.swift */; };
@@ -65,6 +67,8 @@
 		BD251053214092BB009C035C /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		BD482D1A20D1EA30008762D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD5BCDC6213B2286003DE2BE /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		BD6CE99D21E154DE00AE07F9 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		BD6CE99F21E1688D00AE07F9 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		BD71308E21D587FE0033D33E /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		BD952E6F20CF6069005BD858 /* easyNotesiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyNotesiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD952E7220CF6069005BD858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 			children = (
 				BD5BCDC6213B2286003DE2BE /* HTTPManager.swift */,
 				BD251053214092BB009C035C /* Document.swift */,
+				BD6CE99D21E154DE00AE07F9 /* Toast.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				BD179A8420DF275C00F4EF5A /* MainPageViewController.swift */,
 				BD25104F21409229009C035C /* DocumentViewController.swift */,
 				BD71308E21D587FE0033D33E /* DocumentBrowserViewController.swift */,
+				BD6CE99F21E1688D00AE07F9 /* TextViewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -522,6 +528,7 @@
 			files = (
 				BD952EA920CF6732005BD858 /* ImportNoteViewController.swift in Sources */,
 				BDE40ADF20D2BBAE00329034 /* UserViewController.swift in Sources */,
+				BD6CE99E21E154DE00AE07F9 /* Toast.swift in Sources */,
 				BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */,
 				BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */,
 				BD179A8520DF275C00F4EF5A /* MainPageViewController.swift in Sources */,
@@ -529,6 +536,7 @@
 				BD9F4D5C20DED2C8004CE8DD /* SignInMenuViewController.swift in Sources */,
 				BD251054214092BB009C035C /* Document.swift in Sources */,
 				BD482D1B20D1EA30008762D8 /* MainViewController.swift in Sources */,
+				BD6CE9A021E1688D00AE07F9 /* TextViewViewController.swift in Sources */,
 				BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */,
 				BD5BCDC7213B2286003DE2BE /* HTTPManager.swift in Sources */,
 				BD9F4D5A20DEC3D4004CE8DD /* EmailSignInViewController.swift in Sources */,

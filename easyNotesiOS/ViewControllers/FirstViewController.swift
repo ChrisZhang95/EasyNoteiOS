@@ -9,29 +9,6 @@
 import UIKit
 import Alamofire
 class FirstViewController: UIViewController {
-
-    //Handles button click, function sends a http request to python machine learning backend server and retrieve a response
-    @IBAction func httpRequestButtonClick(_ sender: Any) {
-//        let manager = HTTPManager.init()
-//        manager.get()
-        
-        let file = "\(UUID().uuidString).txt"
-        let contents = "Some text..."
-        
-        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let fileURL = dir.appendingPathComponent(file)
-        
-        do {
-            try contents.write(to: fileURL, atomically: false, encoding: .utf8)
-        }
-        catch {
-            print("Error: \(error)")
-        }
-    }
-    
-    func httpRequest(){
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
