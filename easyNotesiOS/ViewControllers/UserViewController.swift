@@ -30,7 +30,12 @@ class UserViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Display user name
+        let defaults = UserDefaults.standard
+        let str = defaults.object(forKey: "email")
+        print(str)
+        //Display user profile
     }
 
     override func didReceiveMemoryWarning() {

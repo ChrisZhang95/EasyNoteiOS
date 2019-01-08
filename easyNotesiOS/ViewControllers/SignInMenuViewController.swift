@@ -29,7 +29,31 @@ class SignInMenuViewController: UIViewController, LoginButtonDelegate {
                     
                     return
                 }
-                print("\nFacebook user logged out\n")
+                
+                //use graph api to retrieve user profile
+                let connection = GraphRequestConnection()
+                let parameter = ["fields": "email, picture.type(large)"]
+                connection.add(GraphRequest(graphPath: "/me", parameters: parameter)) { httpResponse, result in
+                    switch result {
+                    case .success(let response):
+                        print("Graph Request Succeeded: \(response)")
+                        
+                        //Save user data into session
+                        let email = response.dictionaryValue!["email"]
+                        let picture = response.dictionaryValue!["picture"]
+                        
+                        let defaults = UserDefaults.standard
+                        defaults.set(email, forKey:"email")
+                        defaults.set(picture, forKey:"picture")
+                        //default.synchronize()
+                        
+                    case .failed(let error):
+                        print("Graph Request Failed: \(error)")
+                    }
+                }
+                connection.start()
+                
+                print("\nFacebook user logged in\n")
                 self.performSegue(withIdentifier: "menu", sender: nil) //Segue has to be set to "Present Modally"
             }
             
