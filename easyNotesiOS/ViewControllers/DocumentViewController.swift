@@ -23,6 +23,8 @@ class DocumentViewController: UIViewController {
         document?.open(completionHandler: { (success) in
             if success {
                 do{
+                    // #4.2 - Display the document's file name.
+                    self.navigationItem.title = self.document?.fileURL.lastPathComponent
                     self.textView.text = try String(contentsOf: (self.document?.fileURL)!)
 
                 }
