@@ -232,31 +232,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADF-ts-Lbo">
-                                <rect key="frame" x="159" y="319" width="57" height="30"/>
+                                <rect key="frame" x="159" y="557" width="57" height="30"/>
                                 <state key="normal" title="Sign out"/>
                                 <connections>
                                     <action selector="signOut:" destination="ney-WY-0ad" eventType="touchUpInside" id="lqA-zm-epf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e19-oT-Vmy">
-                                <rect key="frame" x="172" y="158" width="30" height="30"/>
+                                <rect key="frame" x="172.5" y="158" width="30" height="30"/>
                                 <state key="normal" title="File"/>
                                 <connections>
                                     <segue destination="kG1-ea-Y1T" kind="show" id="Lrh-aM-V7N"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TkU-yj-0L6">
+                                <rect key="frame" x="123" y="287" width="128" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nd-sT-hK4">
+                                <rect key="frame" x="166" y="461" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ADF-ts-Lbo" secondAttribute="bottom" constant="80" id="0hp-QD-b97"/>
+                            <constraint firstItem="TkU-yj-0L6" firstAttribute="centerY" secondItem="D1Q-se-isp" secondAttribute="centerY" id="IlU-gR-oc0"/>
+                            <constraint firstItem="e19-oT-Vmy" firstAttribute="centerX" secondItem="D1Q-se-isp" secondAttribute="centerX" id="Jon-gn-eHW"/>
                             <constraint firstItem="e19-oT-Vmy" firstAttribute="top" secondItem="D1Q-se-isp" secondAttribute="top" constant="94" id="KkO-xc-GiR"/>
-                            <constraint firstItem="ADF-ts-Lbo" firstAttribute="centerX" secondItem="f9R-9K-nKJ" secondAttribute="centerX" id="L24-aI-Cpj"/>
-                            <constraint firstItem="ADF-ts-Lbo" firstAttribute="centerY" secondItem="f9R-9K-nKJ" secondAttribute="centerY" id="aul-ot-t6O"/>
-                            <constraint firstItem="e19-oT-Vmy" firstAttribute="centerX" secondItem="ADF-ts-Lbo" secondAttribute="centerX" id="yTd-Df-JNW"/>
+                            <constraint firstItem="7nd-sT-hK4" firstAttribute="centerX" secondItem="f9R-9K-nKJ" secondAttribute="centerX" id="QAb-uq-lmG"/>
+                            <constraint firstItem="ADF-ts-Lbo" firstAttribute="centerX" secondItem="f9R-9K-nKJ" secondAttribute="centerX" id="T0A-Hd-qS4"/>
+                            <constraint firstItem="7nd-sT-hK4" firstAttribute="bottom" secondItem="TkU-yj-0L6" secondAttribute="bottom" constant="40" id="ffC-Wx-puG"/>
+                            <constraint firstItem="TkU-yj-0L6" firstAttribute="centerX" secondItem="D1Q-se-isp" secondAttribute="centerX" id="rdL-lc-U9K"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D1Q-se-isp"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jis-Fp-mRC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="image" destination="TkU-yj-0L6" id="oX0-xe-hri"/>
+                        <outlet property="userNameText" destination="7nd-sT-hK4" id="3xk-j9-EXJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9S-TY-Au9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

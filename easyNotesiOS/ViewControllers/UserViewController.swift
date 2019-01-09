@@ -11,7 +11,11 @@ import FacebookLogin
 import FacebookCore
 import FirebaseAuth
 class UserViewController: UIViewController {
-
+    
+    //imageview for user profile
+    @IBOutlet weak var image: UIImageView!
+    //Label for user name
+    @IBOutlet weak var userNameText: UILabel!
     //On sign out button click
     @IBAction func signOut(_ sender: Any) {
         let firebaseAuth = Auth.auth()
@@ -33,9 +37,32 @@ class UserViewController: UIViewController {
         
         //Display user name
         let defaults = UserDefaults.standard
-        let str = defaults.object(forKey: "email")
-        print(str)
+        let firstName = defaults.object(forKey: "firstName") as! String
+        let lastName = defaults.object(forKey: "lastName") as! String
+        let name = firstName + " " + lastName
+        userNameText.text = name
+        
+        //Set imageview to a circle
+//        image.layer.borderWidth = 1
+        image.layer.cornerRadius = image.frame.width/2
+        image.clipsToBounds = true
+        
         //Display user profile
+        let picture = defaults.object(forKey: "picture") as? Dictionary<String, AnyObject>
+        let data = picture!["data"]! as? Dictionary<String, AnyObject>
+        let url = data!["url"]!
+        print(data)
+        print(url)
+        //picture!["data"]
+//        let imageStr = picture!["url"] as String?
+        let imageURL = URL(string: url as! String)
+        if let data = try? Data(contentsOf: imageURL as! URL) {
+            if let img = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self.image.image = img
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

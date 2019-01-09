@@ -32,7 +32,7 @@ class SignInMenuViewController: UIViewController, LoginButtonDelegate {
                 
                 //use graph api to retrieve user profile
                 let connection = GraphRequestConnection()
-                let parameter = ["fields": "email, picture.type(large)"]
+                let parameter = ["fields": "email,  first_name, last_name, picture.type(large)"]
                 connection.add(GraphRequest(graphPath: "/me", parameters: parameter)) { httpResponse, result in
                     switch result {
                     case .success(let response):
@@ -41,10 +41,14 @@ class SignInMenuViewController: UIViewController, LoginButtonDelegate {
                         //Save user data into session
                         let email = response.dictionaryValue!["email"]
                         let picture = response.dictionaryValue!["picture"]
+                        let firstName = response.dictionaryValue!["first_name"]
+                        let lastName = response.dictionaryValue!["last_name"]
                         
                         let defaults = UserDefaults.standard
                         defaults.set(email, forKey:"email")
                         defaults.set(picture, forKey:"picture")
+                        defaults.set(firstName, forKey:"firstName")
+                        defaults.set(lastName, forKey:"lastName")
                         //default.synchronize()
                         
                     case .failed(let error):
