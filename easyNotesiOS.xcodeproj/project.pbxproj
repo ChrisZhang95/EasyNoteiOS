@@ -18,8 +18,7 @@
 		BD6CE9A021E1688D00AE07F9 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6CE99F21E1688D00AE07F9 /* TextViewViewController.swift */; };
 		BD71308F21D587FE0033D33E /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71308E21D587FE0033D33E /* DocumentBrowserViewController.swift */; };
 		BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7220CF6069005BD858 /* AppDelegate.swift */; };
-		BD952E7520CF6069005BD858 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7420CF6069005BD858 /* FirstViewController.swift */; };
-		BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7620CF6069005BD858 /* SecondViewController.swift */; };
+		BD952E7520CF6069005BD858 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7420CF6069005BD858 /* MenuViewController.swift */; };
 		BD952E7A20CF6069005BD858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD952E7820CF6069005BD858 /* Main.storyboard */; };
 		BD952E7C20CF606B005BD858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD952E7B20CF606B005BD858 /* Assets.xcassets */; };
 		BD952E7F20CF606B005BD858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD952E7D20CF606B005BD858 /* LaunchScreen.storyboard */; };
@@ -72,8 +71,7 @@
 		BD71308E21D587FE0033D33E /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		BD952E6F20CF6069005BD858 /* easyNotesiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyNotesiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD952E7220CF6069005BD858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD952E7420CF6069005BD858 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		BD952E7620CF6069005BD858 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BD952E7420CF6069005BD858 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BD952E7920CF6069005BD858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD952E7B20CF606B005BD858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD952E7E20CF606B005BD858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -203,8 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				BD952EA820CF6732005BD858 /* ImportNoteViewController.swift */,
-				BD952E7420CF6069005BD858 /* FirstViewController.swift */,
-				BD952E7620CF6069005BD858 /* SecondViewController.swift */,
+				BD952E7420CF6069005BD858 /* MenuViewController.swift */,
 				BD482D1A20D1EA30008762D8 /* MainViewController.swift */,
 				BDE40ADC20D2B84E00329034 /* TakeNewNoteViewController.swift */,
 				BDE40ADE20D2BBAE00329034 /* UserViewController.swift */,
@@ -522,7 +519,6 @@
 				BDE40ADF20D2BBAE00329034 /* UserViewController.swift in Sources */,
 				BD6CE99E21E154DE00AE07F9 /* Toast.swift in Sources */,
 				BD952EA520CF60FD005BD858 /* CustomControls.swift in Sources */,
-				BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */,
 				BD179A8520DF275C00F4EF5A /* MainPageViewController.swift in Sources */,
 				BD9F4D5820DEB07B004CE8DD /* EmailSignUpViewController.swift in Sources */,
 				BD9F4D5C20DED2C8004CE8DD /* SignInMenuViewController.swift in Sources */,
@@ -533,7 +529,7 @@
 				BD5BCDC7213B2286003DE2BE /* HTTPManager.swift in Sources */,
 				BD9F4D5A20DEC3D4004CE8DD /* EmailSignInViewController.swift in Sources */,
 				BD25105021409229009C035C /* DocumentViewController.swift in Sources */,
-				BD952E7520CF6069005BD858 /* FirstViewController.swift in Sources */,
+				BD952E7520CF6069005BD858 /* MenuViewController.swift in Sources */,
 				BDE40ADD20D2B84E00329034 /* TakeNewNoteViewController.swift in Sources */,
 				BD71308F21D587FE0033D33E /* DocumentBrowserViewController.swift in Sources */,
 			);
