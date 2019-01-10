@@ -25,7 +25,7 @@
 		BD952E7F20CF606B005BD858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD952E7D20CF606B005BD858 /* LaunchScreen.storyboard */; };
 		BD952E8A20CF606B005BD858 /* easyNotesiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E8920CF606B005BD858 /* easyNotesiOSTests.swift */; };
 		BD952E9520CF606B005BD858 /* easyNotesiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E9420CF606B005BD858 /* easyNotesiOSUITests.swift */; };
-		BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952EA420CF60FD005BD858 /* CustomButton.swift */; };
+		BD952EA520CF60FD005BD858 /* CustomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952EA420CF60FD005BD858 /* CustomControls.swift */; };
 		BD952EA920CF6732005BD858 /* ImportNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952EA820CF6732005BD858 /* ImportNoteViewController.swift */; };
 		BD9F4D5820DEB07B004CE8DD /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9F4D5720DEB07B004CE8DD /* EmailSignUpViewController.swift */; };
 		BD9F4D5A20DEC3D4004CE8DD /* EmailSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9F4D5920DEC3D4004CE8DD /* EmailSignInViewController.swift */; };
@@ -84,7 +84,7 @@
 		BD952E9020CF606B005BD858 /* easyNotesiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = easyNotesiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD952E9420CF606B005BD858 /* easyNotesiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = easyNotesiOSUITests.swift; sourceTree = "<group>"; };
 		BD952E9620CF606B005BD858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD952EA420CF60FD005BD858 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		BD952EA420CF60FD005BD858 /* CustomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControls.swift; sourceTree = "<group>"; };
 		BD952EA820CF6732005BD858 /* ImportNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportNoteViewController.swift; sourceTree = "<group>"; };
 		BD9F4D5720DEB07B004CE8DD /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
 		BD9F4D5920DEC3D4004CE8DD /* EmailSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignInViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +136,7 @@
 		BD5BCDC5213B2269003DE2BE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BD952EA420CF60FD005BD858 /* CustomControls.swift */,
 				BD5BCDC6213B2286003DE2BE /* HTTPManager.swift */,
 				BD251053214092BB009C035C /* Document.swift */,
 				BD6CE99D21E154DE00AE07F9 /* Toast.swift */,
@@ -170,7 +171,6 @@
 			children = (
 				BD5BCDC5213B2269003DE2BE /* Models */,
 				BDC6317020DC679400A19E67 /* GoogleService-Info.plist */,
-				BD952EA320CF60C4005BD858 /* CustomControls */,
 				BD952EA220CF609C005BD858 /* ViewControllers */,
 				BD952E7220CF6069005BD858 /* AppDelegate.swift */,
 				BD952E7820CF6069005BD858 /* Main.storyboard */,
@@ -217,14 +217,6 @@
 				BD6CE99F21E1688D00AE07F9 /* TextViewViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		BD952EA320CF60C4005BD858 /* CustomControls */ = {
-			isa = PBXGroup;
-			children = (
-				BD952EA420CF60FD005BD858 /* CustomButton.swift */,
-			);
-			path = CustomControls;
 			sourceTree = "<group>";
 		};
 		C7D37B0C0258801F93347CAF /* Pods */ = {
@@ -529,7 +521,7 @@
 				BD952EA920CF6732005BD858 /* ImportNoteViewController.swift in Sources */,
 				BDE40ADF20D2BBAE00329034 /* UserViewController.swift in Sources */,
 				BD6CE99E21E154DE00AE07F9 /* Toast.swift in Sources */,
-				BD952EA520CF60FD005BD858 /* CustomButton.swift in Sources */,
+				BD952EA520CF60FD005BD858 /* CustomControls.swift in Sources */,
 				BD952E7720CF6069005BD858 /* SecondViewController.swift in Sources */,
 				BD179A8520DF275C00F4EF5A /* MainPageViewController.swift in Sources */,
 				BD9F4D5820DEB07B004CE8DD /* EmailSignUpViewController.swift in Sources */,

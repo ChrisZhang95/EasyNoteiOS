@@ -42,17 +42,11 @@ class UserViewController: UIViewController {
         let name = firstName + " " + lastName
         userNameText.text = name
         
-        //Set imageview to a circle
-//        image.layer.borderWidth = 1
-        image.layer.cornerRadius = image.frame.width/2
-        image.clipsToBounds = true
-        
         //Display user profile
         let picture = defaults.object(forKey: "picture") as? Dictionary<String, AnyObject>
         let data = picture!["data"]! as? Dictionary<String, AnyObject>
         let url = data!["url"]!
-        print(data)
-        print(url)
+
         //picture!["data"]
 //        let imageStr = picture!["url"] as String?
         let imageURL = URL(string: url as! String)

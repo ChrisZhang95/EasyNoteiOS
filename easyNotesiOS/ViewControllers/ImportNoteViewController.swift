@@ -70,7 +70,7 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
         let manager = HTTPManager.init()
         manager.vc = self
         manager.postImage(image: myImg.image!)
-        }
+    }
 //Drawing lines on image
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        swiped = false
