@@ -86,11 +86,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-zc-e5j">
-                                <rect key="frame" x="0.0" y="10" width="414" height="716"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-zc-e5j">
+                                <rect key="frame" x="0.0" y="-12" width="414" height="716"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x57-3a-LLT" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                <rect key="frame" x="172" y="646" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x57-3a-LLT" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
+                                <rect key="frame" x="172" y="634" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Convert">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -106,12 +107,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="x57-3a-LLT" firstAttribute="leading" secondItem="Ptd-w5-1Kp" secondAttribute="leading" constant="172" id="1KZ-z7-Erk"/>
-                            <constraint firstItem="x57-3a-LLT" firstAttribute="centerX" secondItem="sUF-zc-e5j" secondAttribute="centerX" id="Fr1-PZ-ZhS"/>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="centerY" secondItem="hQ4-o4-8YM" secondAttribute="centerY" id="QVW-KD-AUH"/>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="centerX" secondItem="hQ4-o4-8YM" secondAttribute="centerX" id="WwU-h3-fNk"/>
-                            <constraint firstItem="x57-3a-LLT" firstAttribute="top" secondItem="Ptd-w5-1Kp" secondAttribute="top" constant="626" id="Xsg-gq-gjo"/>
-                            <constraint firstAttribute="bottom" secondItem="x57-3a-LLT" secondAttribute="bottom" constant="20" symbolic="YES" id="bFZ-op-Vjh"/>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="width" secondItem="Ptd-w5-1Kp" secondAttribute="width" id="pBt-tZ-e4w"/>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="height" secondItem="Ptd-w5-1Kp" secondAttribute="height" id="qKG-0G-a4y"/>
                         </constraints>
@@ -133,8 +130,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZXa-SU-nK1">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZXa-SU-nK1">
+                                <rect key="frame" x="20" y="20" width="374" height="696"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -166,12 +163,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JsW-2V-bf2" userLabel="myImg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JsW-2V-bf2" userLabel="myImg">
                                 <rect key="frame" x="0.0" y="-12" width="414" height="716"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-UB-jhg" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                <rect key="frame" x="172" y="646" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-UB-jhg" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
+                                <rect key="frame" x="172" y="634" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Convert">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -183,15 +182,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="fPG-UB-jhg" firstAttribute="top" secondItem="MgZ-mq-I87" secondAttribute="top" constant="626" id="1dN-At-F8w"/>
-                            <constraint firstItem="fPG-UB-jhg" firstAttribute="centerX" secondItem="qET-ah-qSb" secondAttribute="centerX" id="7Nl-ph-PU3"/>
-                            <constraint firstAttribute="bottom" secondItem="fPG-UB-jhg" secondAttribute="bottom" constant="20" symbolic="YES" id="COs-jl-K6P"/>
-                            <constraint firstItem="fPG-UB-jhg" firstAttribute="centerX" secondItem="JsW-2V-bf2" secondAttribute="centerX" id="rBk-vi-7xe"/>
-                            <constraint firstItem="JsW-2V-bf2" firstAttribute="width" secondItem="MgZ-mq-I87" secondAttribute="width" id="sRW-EI-seS"/>
-                            <constraint firstItem="JsW-2V-bf2" firstAttribute="height" secondItem="MgZ-mq-I87" secondAttribute="height" id="vHW-ch-SWy"/>
-                            <constraint firstItem="fPG-UB-jhg" firstAttribute="leading" secondItem="MgZ-mq-I87" secondAttribute="leading" constant="172" id="vPs-fH-TFm"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MgZ-mq-I87"/>
                     </view>
                     <connections>

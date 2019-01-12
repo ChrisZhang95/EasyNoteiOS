@@ -27,7 +27,7 @@ class UserViewController: UIViewController {
         }
         
         let loginManager = LoginManager()
-        try loginManager.logOut()
+        loginManager.logOut()
         
         let nextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "userSignIn") as! UINavigationController
         self.present(nextViewController, animated: true, completion: nil)
@@ -50,7 +50,7 @@ class UserViewController: UIViewController {
         //picture!["data"]
 //        let imageStr = picture!["url"] as String?
         let imageURL = URL(string: url as! String)
-        if let data = try? Data(contentsOf: imageURL as! URL) {
+        if let data = try? Data(contentsOf: (imageURL as URL?)!) {
             if let img = UIImage(data: data) {
                 DispatchQueue.main.async {
                     self.image.image = img
