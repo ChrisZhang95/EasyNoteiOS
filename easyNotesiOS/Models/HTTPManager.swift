@@ -40,9 +40,6 @@ class HTTPManager {
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
-                        //print("Request: \(String(describing: response.request))")   // original url request
-                        //print("Response: \(String(describing: response.response))") // http url response
-                        //print("Result: \(response.result)")                         // response serialization result
                         
                         if let json = response.result.value {
                             print("JSON: \(json)") // serialized json response
@@ -57,8 +54,6 @@ class HTTPManager {
                             textViewController.text = utf8Text
                             self.vc?.navigationController?.pushViewController(textViewController, animated: true)
                         }
-                        
-                        
                     }
                 case .failure(let encodingError):
                     print(encodingError)
@@ -66,7 +61,6 @@ class HTTPManager {
                 }
             }
         )
-        
     }
     
     

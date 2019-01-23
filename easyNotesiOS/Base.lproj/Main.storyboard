@@ -168,6 +168,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="customButton" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="convertText:" destination="TT2-6P-3QL" eventType="touchUpInside" id="Yg6-mq-ebX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
