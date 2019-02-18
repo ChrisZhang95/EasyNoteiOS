@@ -52,6 +52,7 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
 
     @IBAction func convertText(_ sender: Any) {
         let manager = HTTPManager.init()
+        manager.vc = self
         manager.postImage(image: myImg.image!)
     }
     

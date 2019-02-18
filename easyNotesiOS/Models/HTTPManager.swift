@@ -19,7 +19,8 @@ class HTTPManager {
     var vc: UIViewController? = nil
     
     init() {
-        self.server = "http://192.168.0.13:5000/image"
+//        self.server = "http://192.168.0.13:5000/image"
+        self.server = "http://192.168.0.19:5000/image"
     }
     
     //override IP address

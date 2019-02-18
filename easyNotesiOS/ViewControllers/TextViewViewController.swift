@@ -20,6 +20,8 @@ class TextViewViewController: UIViewController {
         // Do any additional setup after loading the view.
         textView.text = text
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonClick))
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,21 +31,46 @@ class TextViewViewController: UIViewController {
     
     //On save button click
     @objc func saveButtonClick() {
-        let file = "\(UUID().uuidString).txt"
-        let contents = self.text
+        self.textView.endEditing(true)
         
-        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let fileURL = dir.appendingPathComponent(file)
+        // If text was modified
+        if(text != textView.text){
+            //alert message
+            let alert = UIAlertController(title: "Feedback", message: "We noticed a difference in text, would you like to help us improve our app by sending the feedback?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Default action"), style: .default, handler: { _ in
+                // Send feedback
+                
+                // Save file
+                self.saveFile();
+            }))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: "Default action"), style: .default, handler: { _ in
+                // Do nothing
+                
+                // Save file
+                self.saveFile()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
         
-        do {
-            try contents?.write(to: fileURL, atomically: false, encoding: .utf8)
-            Toast.show(message: "Saved", controller: self)
-        }
-        catch {
-            Toast.show(message: error as! String, controller: self)
-        }
+        
+        
     }
 
+    func saveFile(){
+        let file = "\(UUID().uuidString).txt"
+        let contents = self.text
+    
+        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = dir.appendingPathComponent(file)
+    
+        do {
+        try contents?.write(to: fileURL, atomically: false, encoding: .utf8)
+        Toast.show(message: "Saved", controller: self)
+        }
+        catch {
+        Toast.show(message: error as! String, controller: self)
+        }
+    }
     /*
     // MARK: - Navigation
 
