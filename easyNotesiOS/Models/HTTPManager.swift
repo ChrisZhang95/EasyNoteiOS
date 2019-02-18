@@ -20,7 +20,7 @@ class HTTPManager {
     
     init() {
 //        self.server = "http://192.168.0.13:5000/image"
-        self.server = "http://192.168.0.19:5000/image"
+        self.server = "http://192.168.0.19:5000/"
     }
     
     //override IP address
@@ -36,7 +36,7 @@ class HTTPManager {
                 multipartFormData.append(imageData, withName: "image", fileName: "image.jpeg", mimeType: "image/jpeg")
             },
             
-            to: server,
+            to: server+"image",
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
@@ -63,12 +63,13 @@ class HTTPManager {
             }
         )
     }
-    
-    
+    func postFeedback(feedback: String){
+        Alamofire.request(server+"feedback",method: .post, parameters: ["body" : feedback], encoding: JSONEncoding.default, headers: [:])
+    }
     
     //Send a GET request to ther server
-    func get(){
-        Alamofire.request(server).responseJSON { response in
+    func get(feedback: String){
+        Alamofire.request(server + "/feedback/" + feedback).responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")                         // response serialization result

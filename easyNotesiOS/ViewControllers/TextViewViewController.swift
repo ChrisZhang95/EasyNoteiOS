@@ -39,6 +39,7 @@ class TextViewViewController: UIViewController {
             let alert = UIAlertController(title: "Feedback", message: "We noticed a difference in text, would you like to help us improve our app by sending the feedback?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Default action"), style: .default, handler: { _ in
                 // Send feedback
+                self.sendFeedback()
                 
                 // Save file
                 self.saveFile();
@@ -56,6 +57,11 @@ class TextViewViewController: UIViewController {
         
     }
 
+    func sendFeedback(){
+        let manager = HTTPManager();
+        manager.postFeedback(feedback: textView.text)
+    }
+    
     func saveFile(){
         let file = "\(UUID().uuidString).txt"
         let contents = self.text
