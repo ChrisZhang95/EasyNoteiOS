@@ -23,6 +23,7 @@ class DocumentViewController: UIViewController {
         document?.open(completionHandler: { (success) in
             if success {
                 do{
+                    //stop the indicator
                     // #4.2 - Display the document's file name.
                     self.navigationItem.title = self.document?.fileURL.lastPathComponent
                     self.textView.text = try String(contentsOf: (self.document?.fileURL)!)
@@ -33,6 +34,7 @@ class DocumentViewController: UIViewController {
                 }
             } else {
                 // Make sure to handle the failed import appropriately, e.g., by presenting an error message to the user.
+                //stop the indicator 
             }
         })
     }
