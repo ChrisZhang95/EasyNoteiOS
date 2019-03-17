@@ -9,7 +9,7 @@
 import UIKit
 
 class DocumentViewController: UIViewController {
-    
+    //var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     @IBOutlet weak var textView: UITextView!
     
     var document: UIDocument?
@@ -17,13 +17,13 @@ class DocumentViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.title = self.document?.localizedName;
+        //self.navigationItem.title = self.document?.localizedName;
         
         // Access the document
         document?.open(completionHandler: { (success) in
             if success {
                 do{
-                    //stop the indicator
+                    //self.activityIndicator.stopAnimating()
                     // #4.2 - Display the document's file name.
                     self.navigationItem.title = self.document?.fileURL.lastPathComponent
                     self.textView.text = try String(contentsOf: (self.document?.fileURL)!)
@@ -34,7 +34,8 @@ class DocumentViewController: UIViewController {
                 }
             } else {
                 // Make sure to handle the failed import appropriately, e.g., by presenting an error message to the user.
-                //stop the indicator 
+                //stop the indicator
+                //self.activityIndicator.stopAnimating()
             }
         })
     }

@@ -58,10 +58,12 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
         activityIndicator.center = self.view.center
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
     }
     
     //On share button click
     @objc func shareButtonClick() {
+        activityIndicator.stopAnimating()
         //Share image
         let activityController = UIActivityViewController(activityItems: [myImg.image!], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
