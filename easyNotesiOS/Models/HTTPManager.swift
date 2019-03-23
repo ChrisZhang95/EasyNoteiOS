@@ -19,8 +19,9 @@ class HTTPManager {
     var vc: UIViewController? = nil
     
     init() {
-//        self.server = "http://192.168.0.13:5000/image"
-        self.server = "http://192.168.0.19:5000/"
+//        self.server = "http://192.168.0.19:5000/"
+        self.server = "http://100.65.197.192:5000/"
+        
     }
     
     //override IP address
@@ -47,6 +48,7 @@ class HTTPManager {
                         }
                         
                         if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                            
                             print("Data: \(utf8Text)") // original server data as UTF8 string
                             //Toast.show(message: utf8Text, controller: self.vc!)
                             
