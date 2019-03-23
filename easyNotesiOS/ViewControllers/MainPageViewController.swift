@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 
 class MainPageViewController: UIViewController {
-
+    let backgroundImageView = UIImageView()
     override func viewDidLoad() {
         super.viewDidLoad()
 //    self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -20,8 +20,19 @@ class MainPageViewController: UIViewController {
         } else {
             // No user is signed in, do nothing
         }
+        setBackground()
     }
-
+    func setBackground(){
+        view.addSubview(backgroundImageView)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImageView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
+        backgroundImageView.leadingAnchor.constraint(equalTo:view.leadingAnchor).isActive = true
+        backgroundImageView.trailingAnchor.constraint(equalTo:view.trailingAnchor).isActive = true
+        backgroundImageView.image = UIImage(named: "background")
+        view.sendSubview(toBack: backgroundImageView)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
