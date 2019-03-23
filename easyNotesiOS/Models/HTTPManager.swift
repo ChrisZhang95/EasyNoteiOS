@@ -20,7 +20,7 @@ class HTTPManager {
     
     init() {
 //        self.server = "http://192.168.0.13:5000/image"
-        self.server = "http://192.168.0.19:5000/"
+        self.server = "http://100.64.229.28:5000/"
     }
     
     //override IP address

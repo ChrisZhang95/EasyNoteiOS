@@ -11,7 +11,7 @@ import FacebookLogin
 import FacebookCore
 import FirebaseAuth
 class UserViewController: UIViewController {
-    
+    let backgroundImageView = UIImageView()
     //imageview for user profile
     @IBOutlet weak var image: UIImageView!
     //Label for user name
@@ -35,8 +35,10 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //Display user name
         let defaults = UserDefaults.standard
+
         let firstName = defaults.object(forKey: "firstName") as! String
         let lastName = defaults.object(forKey: "lastName") as! String
         let name = firstName + " " + lastName
@@ -57,6 +59,19 @@ class UserViewController: UIViewController {
                 }
             }
         }
+        setBackground()
+        
+    }
+    func setBackground(){
+        view.addSubview(backgroundImageView)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImageView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
+        backgroundImageView.leadingAnchor.constraint(equalTo:view.leadingAnchor).isActive = true
+        backgroundImageView.trailingAnchor.constraint(equalTo:view.trailingAnchor).isActive = true
+        backgroundImageView.image = UIImage(named: "background")
+        view.sendSubview(toBack: backgroundImageView)
+        
     }
 
     override func didReceiveMemoryWarning() {
