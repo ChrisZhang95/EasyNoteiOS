@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    let backgroundImageView = UIImageView()
     
     @IBOutlet weak var imgView: UIImageView!
     
@@ -24,6 +25,19 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Create UIImagePickerController on load up
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
+        setBackground()
+    }
+    
+    func setBackground(){
+        view.addSubview(backgroundImageView)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImageView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
+        backgroundImageView.leadingAnchor.constraint(equalTo:view.leadingAnchor).isActive = true
+        backgroundImageView.trailingAnchor.constraint(equalTo:view.trailingAnchor).isActive = true
+        backgroundImageView.image = UIImage(named: "background")
+        view.sendSubview(toBack: backgroundImageView)
+        
     }
 
     @IBAction func takeNewButtonClick(_ sender: Any) {

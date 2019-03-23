@@ -9,7 +9,7 @@
 import UIKit
 
 class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     //Drawing
     var lastPoint = CGPoint.zero
     var red: CGFloat = 0.0
@@ -72,6 +72,10 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
         let manager = HTTPManager.init()
         manager.vc = self
         manager.postImage(image: myImg.image!)
+        activityIndicator.center = self.view.center
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
     }
 //Drawing lines on image
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -9,7 +9,7 @@
 import UIKit
 
 class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     var img:UIImage? = nil
     @IBOutlet weak var myImg: UIImageView!
     
@@ -54,10 +54,16 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
         let manager = HTTPManager.init()
         manager.vc = self
         manager.postImage(image: myImg.image!)
+        
+        activityIndicator.center = self.view.center
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
     }
     
     //On share button click
     @objc func shareButtonClick() {
+        activityIndicator.stopAnimating()
         //Share image
         let activityController = UIActivityViewController(activityItems: [myImg.image!], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
