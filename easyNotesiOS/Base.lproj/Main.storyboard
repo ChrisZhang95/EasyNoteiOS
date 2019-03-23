@@ -217,47 +217,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADF-ts-Lbo">
-                                <rect key="frame" x="178.66666666666666" y="626" width="57" height="30"/>
-                                <state key="normal" title="Sign out"/>
-                                <connections>
-                                    <action selector="signOut:" destination="ney-WY-0ad" eventType="touchUpInside" id="lqA-zm-epf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e19-oT-Vmy">
-                                <rect key="frame" x="192" y="158" width="30" height="30"/>
-                                <state key="normal" title="File"/>
-                                <connections>
-                                    <segue destination="kG1-ea-Y1T" kind="show" id="Lrh-aM-V7N"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nd-sT-hK4">
-                                <rect key="frame" x="186" y="461" width="42" height="21"/>
+                                <rect key="frame" x="186" y="418" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TkU-yj-0L6" customClass="RoundImageView" customModule="easyNotesiOS" customModuleProvider="target">
-                                <rect key="frame" x="143" y="304" width="128" height="128"/>
+                                <rect key="frame" x="162" y="323" width="90" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="vAG-O2-aFk"/>
+                                    <constraint firstAttribute="width" constant="90" id="gye-0k-sMP"/>
+                                    <constraint firstAttribute="height" constant="90" id="vAG-O2-aFk"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundImageView" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADF-ts-Lbo" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
+                                <rect key="frame" x="169.66666666666666" y="552" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="1sl-UD-IKP"/>
+                                    <constraint firstAttribute="width" constant="75" id="s2c-B1-Zwt"/>
+                                </constraints>
+                                <state key="normal" title="Sign out" image="logout">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signOut:" destination="ney-WY-0ad" eventType="touchUpInside" id="lqA-zm-epf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e19-oT-Vmy" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
+                                <rect key="frame" x="169.66666666666666" y="124" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="AzM-mg-Izq"/>
+                                    <constraint firstAttribute="width" constant="75" id="cTI-Er-WgR"/>
+                                </constraints>
+                                <state key="normal" title="Files" image="files">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="kG1-ea-Y1T" kind="show" id="Lrh-aM-V7N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shk-Xt-Qgj">
+                                <rect key="frame" x="178" y="632" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Files" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pq-Fs-VtV">
+                                <rect key="frame" x="189.66666666666666" y="204" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TkU-yj-0L6" firstAttribute="leading" secondItem="D1Q-se-isp" secondAttribute="leading" constant="143" id="0Id-AJ-Rv5"/>
-                            <constraint firstAttribute="bottom" secondItem="ADF-ts-Lbo" secondAttribute="bottom" constant="80" id="0hp-QD-b97"/>
-                            <constraint firstItem="e19-oT-Vmy" firstAttribute="centerX" secondItem="D1Q-se-isp" secondAttribute="centerX" id="Jon-gn-eHW"/>
-                            <constraint firstItem="e19-oT-Vmy" firstAttribute="top" secondItem="D1Q-se-isp" secondAttribute="top" constant="94" id="KkO-xc-GiR"/>
+                            <constraint firstItem="Shk-Xt-Qgj" firstAttribute="centerX" secondItem="f9R-9K-nKJ" secondAttribute="centerX" id="BSh-99-gOo"/>
+                            <constraint firstItem="5pq-Fs-VtV" firstAttribute="centerX" secondItem="f9R-9K-nKJ" secondAttribute="centerX" id="MgS-BJ-MPd"/>
                             <constraint firstItem="TkU-yj-0L6" firstAttribute="centerY" secondItem="f9R-9K-nKJ" secondAttribute="centerY" id="PSt-NJ-4tt"/>
                             <constraint firstItem="7nd-sT-hK4" firstAttribute="centerX" secondItem="f9R-9K-nKJ" secondAttribute="centerX" id="QAb-uq-lmG"/>
+                            <constraint firstItem="D1Q-se-isp" firstAttribute="bottom" secondItem="ADF-ts-Lbo" secondAttribute="bottom" constant="60" id="RWt-gP-Il9"/>
                             <constraint firstItem="ADF-ts-Lbo" firstAttribute="centerX" secondItem="f9R-9K-nKJ" secondAttribute="centerX" id="T0A-Hd-qS4"/>
-                            <constraint firstItem="7nd-sT-hK4" firstAttribute="top" secondItem="TkU-yj-0L6" secondAttribute="bottom" constant="29" id="pLt-EO-OA8"/>
+                            <constraint firstItem="5pq-Fs-VtV" firstAttribute="top" secondItem="e19-oT-Vmy" secondAttribute="bottom" constant="5" id="aw1-QA-vld"/>
+                            <constraint firstItem="e19-oT-Vmy" firstAttribute="centerX" secondItem="f9R-9K-nKJ" secondAttribute="centerX" id="jPO-uT-Kjf"/>
+                            <constraint firstItem="7nd-sT-hK4" firstAttribute="top" secondItem="TkU-yj-0L6" secondAttribute="bottom" constant="5" id="pLt-EO-OA8"/>
+                            <constraint firstItem="Shk-Xt-Qgj" firstAttribute="top" secondItem="ADF-ts-Lbo" secondAttribute="bottom" constant="5" id="rtk-Tc-UHq"/>
                             <constraint firstItem="TkU-yj-0L6" firstAttribute="centerX" secondItem="7nd-sT-hK4" secondAttribute="centerX" id="xUF-9p-2QK"/>
+                            <constraint firstItem="e19-oT-Vmy" firstAttribute="top" secondItem="D1Q-se-isp" secondAttribute="top" constant="60" id="xc6-Hv-oHc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D1Q-se-isp"/>
                     </view>
@@ -270,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9S-TY-Au9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="1406"/>
+            <point key="canvasLocation" x="1476.8115942028987" y="1405.4347826086957"/>
         </scene>
         <!--Main Page View Controller-->
         <scene sceneID="28v-Sh-XG7">
@@ -764,8 +799,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="files" width="512" height="512"/>
         <image name="icons8-street-view-30" width="22.5" height="22.5"/>
         <image name="icons8-task-30" width="22.5" height="22.5"/>
+        <image name="logout" width="512" height="512"/>
         <image name="notes" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
