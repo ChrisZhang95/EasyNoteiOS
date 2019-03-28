@@ -19,9 +19,12 @@ class HTTPManager {
     var vc: UIViewController? = nil
     
     init() {
-//        self.server = "http://192.168.0.19:5000/"
-        self.server = "http://100.65.197.192:5000/"
-        
+        //        self.server = "http://192.168.0.19:5000/"
+        //        self.server = "http://100.65.197.192:5000/"
+        let defaults = UserDefaults.standard
+        let ipAddress = defaults.object(forKey: "ipAddress") as! String
+        self.server = "http://" + ipAddress + ":5000/"
+        print (self.server + "!!!!!!!!!")
     }
     
     //override IP address

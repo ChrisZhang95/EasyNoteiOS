@@ -137,9 +137,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZXa-SU-nK1">
-                                <rect key="frame" x="20" y="20" width="374" height="696"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZXa-SU-nK1">
+                                <rect key="frame" x="0.0" y="10" width="414" height="716"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -147,6 +146,12 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZXa-SU-nK1" firstAttribute="height" secondItem="aW5-8D-vyD" secondAttribute="height" id="CRv-gc-IwU"/>
+                            <constraint firstItem="ZXa-SU-nK1" firstAttribute="centerY" secondItem="9Sn-Hr-9Dg" secondAttribute="centerY" id="Jgz-so-tug"/>
+                            <constraint firstItem="ZXa-SU-nK1" firstAttribute="width" secondItem="aW5-8D-vyD" secondAttribute="width" id="mwV-Cj-tR2"/>
+                            <constraint firstItem="ZXa-SU-nK1" firstAttribute="centerX" secondItem="9Sn-Hr-9Dg" secondAttribute="centerX" id="zn9-Xi-Zv5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aW5-8D-vyD"/>
                     </view>
                     <connections>
@@ -720,9 +725,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a7W-Fb-7ai">
-                                <rect key="frame" x="20" y="20" width="374" height="696"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a7W-Fb-7ai">
+                                <rect key="frame" x="0.0" y="10" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -730,6 +734,12 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a7W-Fb-7ai" firstAttribute="height" secondItem="v6l-6o-5wV" secondAttribute="height" id="8db-q3-Ktu"/>
+                            <constraint firstItem="a7W-Fb-7ai" firstAttribute="centerY" secondItem="SPI-cy-6Em" secondAttribute="centerY" id="UVn-Zs-Ewf"/>
+                            <constraint firstItem="a7W-Fb-7ai" firstAttribute="centerX" secondItem="SPI-cy-6Em" secondAttribute="centerX" id="YSB-iM-0Nc"/>
+                            <constraint firstItem="a7W-Fb-7ai" firstAttribute="width" secondItem="v6l-6o-5wV" secondAttribute="width" id="y1n-1N-Hns"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="v6l-6o-5wV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="GDF-MZ-bW0"/>
