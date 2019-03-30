@@ -16,6 +16,10 @@ class MainPageViewController: UIViewController {
 //    self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         if Auth.auth().currentUser != nil {
+            let defaults = UserDefaults.standard
+            if(defaults.object(forKey: "ipAddress") == nil){
+                defaults.set("", forKey:"ipAddress")
+            }
             performSegue(withIdentifier: "menu", sender: self)
         } else {
             // No user is signed in, do nothing
