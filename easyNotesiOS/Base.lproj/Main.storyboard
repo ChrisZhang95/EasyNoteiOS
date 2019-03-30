@@ -18,15 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vww-B7-4aF">
-                                <rect key="frame" x="62" y="243.33333333333331" width="290" height="249.33333333333331"/>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vww-B7-4aF">
+                                <rect key="frame" x="60" y="184" width="294" height="368"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfk-Oc-Ipu" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                        <rect key="frame" x="103" y="8" width="85" height="85"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfk-Oc-Ipu" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
+                                        <rect key="frame" x="109.66666666666666" y="0.0" width="75" height="75"/>
                                         <color key="backgroundColor" red="0.96470588235294119" green="0.65490196078431373" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="85" id="87K-zS-HwA"/>
-                                            <constraint firstAttribute="width" constant="85" id="S3p-8a-EU2"/>
+                                            <constraint firstAttribute="height" constant="75" id="87K-zS-HwA"/>
+                                            <constraint firstAttribute="width" constant="75" id="S3p-8a-EU2"/>
                                         </constraints>
                                         <state key="normal" image="icons8-slr-camera-60 (1)">
                                             <color key="titleColor" red="0.23133905439999999" green="0.23133905439999999" blue="0.23133905439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,41 +39,60 @@
                                             <action selector="takeNewButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="zy0-5l-ffz"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take new note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izf-od-VaQ">
+                                        <rect key="frame" x="92" y="80" width="110" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Import from Library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyY-4n-oQN">
+                                        <rect key="frame" x="77" y="343" width="149" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWR-ru-tgl" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
+                                        <rect key="frame" x="109.66666666666666" y="263" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.30196078431372547" green="0.70196078431372544" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="NQK-6W-dzf"/>
+                                            <constraint firstAttribute="width" constant="75" id="Viu-CB-dYc"/>
+                                        </constraints>
+                                        <state key="normal" image="icons8-photo-gallery-filled-60">
+                                            <color key="titleColor" red="0.23133905439999999" green="0.23133905439999999" blue="0.23133905439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="customButton" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="importButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="orT-2M-p0m"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="UyY-4n-oQN" firstAttribute="centerX" secondItem="vww-B7-4aF" secondAttribute="centerX" constant="4.5" id="TBO-zj-0V3"/>
                                     <constraint firstItem="Rfk-Oc-Ipu" firstAttribute="top" secondItem="vww-B7-4aF" secondAttribute="top" id="Wiw-Hj-0wd"/>
+                                    <constraint firstItem="UyY-4n-oQN" firstAttribute="top" secondItem="bWR-ru-tgl" secondAttribute="bottom" constant="5" id="arA-yJ-1Un"/>
                                     <constraint firstItem="Rfk-Oc-Ipu" firstAttribute="centerX" secondItem="vww-B7-4aF" secondAttribute="centerX" id="fdS-82-xwk"/>
+                                    <constraint firstAttribute="bottom" secondItem="bWR-ru-tgl" secondAttribute="bottom" constant="30" id="ogr-aD-pos"/>
+                                    <constraint firstItem="bWR-ru-tgl" firstAttribute="centerX" secondItem="vww-B7-4aF" secondAttribute="centerX" id="rZS-us-3rz"/>
+                                    <constraint firstItem="izf-od-VaQ" firstAttribute="centerX" secondItem="vww-B7-4aF" secondAttribute="centerX" id="rhc-TP-CeG"/>
+                                    <constraint firstItem="izf-od-VaQ" firstAttribute="top" secondItem="Rfk-Oc-Ipu" secondAttribute="bottom" constant="5" id="y6N-W8-fxX"/>
                                 </constraints>
+                                <viewLayoutGuide key="safeArea" id="K2u-tf-2EE"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWR-ru-tgl" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                <rect key="frame" x="165" y="407" width="85" height="85"/>
-                                <color key="backgroundColor" red="0.30196078431372547" green="0.70196078431372544" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="NQK-6W-dzf"/>
-                                    <constraint firstAttribute="width" constant="85" id="Viu-CB-dYc"/>
-                                </constraints>
-                                <state key="normal" image="icons8-photo-gallery-filled-60">
-                                    <color key="titleColor" red="0.23133905439999999" green="0.23133905439999999" blue="0.23133905439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="customButton" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="importButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="orT-2M-p0m"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vww-B7-4aF" firstAttribute="height" secondItem="PQr-Ze-W5v" secondAttribute="height" multiplier="0.4" id="GHu-NX-tBU"/>
-                            <constraint firstItem="vww-B7-4aF" firstAttribute="width" secondItem="PQr-Ze-W5v" secondAttribute="width" multiplier="0.7" id="GPE-RX-WhS"/>
-                            <constraint firstAttribute="bottom" secondItem="bWR-ru-tgl" secondAttribute="bottom" constant="244" id="WGn-0y-q2F"/>
+                            <constraint firstItem="vww-B7-4aF" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Fhk-gh-zcI"/>
+                            <constraint firstItem="vww-B7-4aF" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="60" id="Hwh-mc-n6l"/>
+                            <constraint firstItem="vww-B7-4aF" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="120" id="Iyy-Tp-oe2"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="d2V-Sb-1sD"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="hTa-h8-ORN"/>
-                            <constraint firstItem="bWR-ru-tgl" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="xqE-m2-fjA"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="vww-B7-4aF" secondAttribute="trailing" constant="60" id="wxg-H4-JKv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -91,14 +110,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x57-3a-LLT" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x57-3a-LLT" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
                                 <rect key="frame" x="179.66666666666666" y="661" width="55" height="55"/>
                                 <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="HIG-T8-q2N"/>
                                     <constraint firstAttribute="height" constant="55" id="e3n-ox-qbd"/>
                                 </constraints>
-                                <state key="normal" title="Convert">
+                                <state key="normal" image="icons8-synchronize-filled-50">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -174,7 +193,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-UB-jhg" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-UB-jhg" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
                                 <rect key="frame" x="179.66666666666666" y="661" width="55" height="55"/>
                                 <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -182,7 +201,7 @@
                                     <constraint firstAttribute="width" constant="55" id="r9O-mB-cC1"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="Bgk-Du-jr7"/>
-                                <state key="normal" title="Convert">
+                                <state key="normal" image="icons8-synchronize-filled-50">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -817,6 +836,7 @@
         <image name="icons8-photo-gallery-filled-60" width="154.28572082519531" height="154.28572082519531"/>
         <image name="icons8-slr-camera-60 (1)" width="154.28572082519531" height="154.28572082519531"/>
         <image name="icons8-street-view-30" width="22.5" height="22.5"/>
+        <image name="icons8-synchronize-filled-50" width="156.52174377441406" height="156.52174377441406"/>
         <image name="icons8-task-30" width="22.5" height="22.5"/>
         <image name="logout" width="512" height="512"/>
         <image name="notes" width="1200" height="1200"/>

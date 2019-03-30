@@ -54,12 +54,13 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
         let manager = HTTPManager.init()
         manager.vc = self
         manager.postImage(image: myImg.image!)
+        manager.indicator = activityIndicator
+
         LoaderController.sharedInstance.showLoader()
         activityIndicator.center = self.view.center
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
-        manager.indicator = activityIndicator
     }
     
     //On share button click
