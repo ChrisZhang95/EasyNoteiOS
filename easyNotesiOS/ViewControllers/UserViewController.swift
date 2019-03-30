@@ -11,6 +11,9 @@ import FacebookLogin
 import FacebookCore
 import FirebaseAuth
 class UserViewController: UIViewController {
+    
+    let defaults = UserDefaults.standard
+    
     let backgroundImageView = UIImageView()
     //imageview for user profile
     @IBOutlet weak var image: UIImageView!
@@ -28,8 +31,12 @@ class UserViewController: UIViewController {
         
         let loginManager = LoginManager()
         loginManager.logOut()
+        defaults.set(nil, forKey:"firstName")
+        defaults.set(nil, forKey:"lastName")
         
         let nextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "userSignIn") as! UINavigationController
+        
+        
         self.present(nextViewController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
@@ -39,7 +46,7 @@ class UserViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Network", style: .plain, target: self, action: #selector(networkButtonClick))
         
         //Display user name
-        let defaults = UserDefaults.standard
+        
 
         let firstName = defaults.object(forKey: "firstName") as? String
         let lastName = defaults.object(forKey: "lastName") as? String

@@ -14,12 +14,10 @@ class MainPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //    self.navigationController?.setNavigationBarHidden(false, animated: false)
+        let defaults = UserDefaults.standard
         
-        if Auth.auth().currentUser != nil {
-            let defaults = UserDefaults.standard
-            if(defaults.object(forKey: "ipAddress") == nil){
-                defaults.set("", forKey:"ipAddress")
-            }
+        if(defaults.object(forKey: "firstName") != nil) {
+            
             performSegue(withIdentifier: "menu", sender: self)
         } else {
             // No user is signed in, do nothing
@@ -37,6 +35,9 @@ class MainPageViewController: UIViewController {
         view.sendSubview(toBack: backgroundImageView)
         
     }
+    
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

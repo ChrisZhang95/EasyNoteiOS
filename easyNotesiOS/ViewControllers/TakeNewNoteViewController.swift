@@ -54,11 +54,10 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
         let manager = HTTPManager.init()
         manager.vc = self
         manager.postImage(image: myImg.image!)
-        manager.indicator = activityIndicator
+        //manager.indicator = activityIndicator
 
-        LoaderController.sharedInstance.showLoader()
         activityIndicator.center = self.view.center
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
     }
@@ -69,6 +68,11 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
         //Share image
         let activityController = UIActivityViewController(activityItems: [myImg.image!], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("Reappeared!!!!!!!!!!")
+        activityIndicator.stopAnimating()
     }
     /*
     // MARK: - Navigation

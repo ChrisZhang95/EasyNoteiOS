@@ -18,6 +18,11 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = UserDefaults.standard
+
+        if(defaults.object(forKey: "ipAddress") == nil){
+            networkButtonClick()
+        }
         // Do any additional setup after loading the view, typically from a nib.
         //        let documentURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         //        print("URL: \(documentURL)")
@@ -111,6 +116,29 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
         _ = navigationController?.popViewController(animated: true)
+    }
+    
+    //Network configuration
+    func networkButtonClick() {
+        
+        let defaults = UserDefaults.standard
+        //Share image
+        let alertController = UIAlertController(title: "Network Configuration", message: "", preferredStyle: .alert)
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.keyboardType = .decimalPad
+        }
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { alert -> Void in
+            let firstTextField = alertController.textFields![0] as UITextField
+            
+            defaults.set(firstTextField.text, forKey:"ipAddress")
+            print("http://" + firstTextField.text! + ":5000/")
+            
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: { (action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
