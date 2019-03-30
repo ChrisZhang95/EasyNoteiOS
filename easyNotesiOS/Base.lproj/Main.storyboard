@@ -21,55 +21,59 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vww-B7-4aF">
                                 <rect key="frame" x="62" y="243.33333333333331" width="290" height="249.33333333333331"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfk-Oc-Ipu" customClass="CustumButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="74.666666666666671"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="Take new note">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfk-Oc-Ipu" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
+                                        <rect key="frame" x="103" y="8" width="85" height="85"/>
+                                        <color key="backgroundColor" red="0.96470588235294119" green="0.65490196078431373" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="87K-zS-HwA"/>
+                                            <constraint firstAttribute="width" constant="85" id="S3p-8a-EU2"/>
+                                        </constraints>
+                                        <state key="normal" image="icons8-slr-camera-60 (1)">
                                             <color key="titleColor" red="0.23133905439999999" green="0.23133905439999999" blue="0.23133905439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="customButton" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="takeNewButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="zy0-5l-ffz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWR-ru-tgl" customClass="CustumButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="174.66666666666666" width="290" height="74.666666666666657"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="Import from library">
-                                            <color key="titleColor" red="0.23133905439999999" green="0.23133905439999999" blue="0.23133905439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="customButton" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="importButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="orT-2M-p0m"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="bWR-ru-tgl" firstAttribute="width" secondItem="vww-B7-4aF" secondAttribute="width" id="05l-3N-OFs"/>
                                     <constraint firstItem="Rfk-Oc-Ipu" firstAttribute="top" secondItem="vww-B7-4aF" secondAttribute="top" id="Wiw-Hj-0wd"/>
-                                    <constraint firstItem="bWR-ru-tgl" firstAttribute="centerX" secondItem="vww-B7-4aF" secondAttribute="centerX" id="eAt-Au-vva"/>
                                     <constraint firstItem="Rfk-Oc-Ipu" firstAttribute="centerX" secondItem="vww-B7-4aF" secondAttribute="centerX" id="fdS-82-xwk"/>
-                                    <constraint firstAttribute="bottom" secondItem="bWR-ru-tgl" secondAttribute="bottom" id="iLm-9o-to7"/>
-                                    <constraint firstItem="Rfk-Oc-Ipu" firstAttribute="width" secondItem="vww-B7-4aF" secondAttribute="width" id="mcU-8i-g9U"/>
-                                    <constraint firstItem="Rfk-Oc-Ipu" firstAttribute="height" secondItem="vww-B7-4aF" secondAttribute="height" multiplier="0.3" id="nVF-Su-dtH"/>
-                                    <constraint firstItem="bWR-ru-tgl" firstAttribute="height" secondItem="vww-B7-4aF" secondAttribute="height" multiplier="0.3" id="xF4-aR-Twx"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWR-ru-tgl" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
+                                <rect key="frame" x="165" y="407" width="85" height="85"/>
+                                <color key="backgroundColor" red="0.30196078431372547" green="0.70196078431372544" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="NQK-6W-dzf"/>
+                                    <constraint firstAttribute="width" constant="85" id="Viu-CB-dYc"/>
+                                </constraints>
+                                <state key="normal" image="icons8-photo-gallery-filled-60">
+                                    <color key="titleColor" red="0.23133905439999999" green="0.23133905439999999" blue="0.23133905439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="customButton" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="importButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="orT-2M-p0m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="height" secondItem="PQr-Ze-W5v" secondAttribute="height" multiplier="0.4" id="GHu-NX-tBU"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="width" secondItem="PQr-Ze-W5v" secondAttribute="width" multiplier="0.7" id="GPE-RX-WhS"/>
+                            <constraint firstAttribute="bottom" secondItem="bWR-ru-tgl" secondAttribute="bottom" constant="244" id="WGn-0y-q2F"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="d2V-Sb-1sD"/>
                             <constraint firstItem="vww-B7-4aF" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="hTa-h8-ORN"/>
+                            <constraint firstItem="bWR-ru-tgl" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="xqE-m2-fjA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -77,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="-364"/>
+            <point key="canvasLocation" x="1476.8115942028987" y="-364.4021739130435"/>
         </scene>
         <!--Take New Note View Controller-->
         <scene sceneID="kbF-iP-Cam">
@@ -800,12 +804,14 @@
     </scenes>
     <resources>
         <image name="files" width="512" height="512"/>
+        <image name="icons8-photo-gallery-filled-60" width="154.28572082519531" height="154.28572082519531"/>
+        <image name="icons8-slr-camera-60 (1)" width="154.28572082519531" height="154.28572082519531"/>
         <image name="icons8-street-view-30" width="22.5" height="22.5"/>
         <image name="icons8-task-30" width="22.5" height="22.5"/>
         <image name="logout" width="512" height="512"/>
         <image name="notes" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JTm-ok-q0w"/>
+        <segue reference="tUe-Wl-pBl"/>
     </inferredMetricsTieBreakers>
 </document>

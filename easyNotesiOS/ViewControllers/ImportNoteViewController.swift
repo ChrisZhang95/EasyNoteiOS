@@ -9,7 +9,7 @@
 import UIKit
 
 class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    //var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     //Drawing
     var lastPoint = CGPoint.zero
     var red: CGFloat = 0.0
@@ -25,7 +25,7 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //Display share button on top right
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareButtonClick))
         
@@ -72,10 +72,11 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
         let manager = HTTPManager.init()
         manager.vc = self
         manager.postImage(image: myImg.image!)
-        activityIndicator.center = self.view.center
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(activityIndicator)
-        activityIndicator.startAnimating()
+//        activityIndicator.center = self.view.center
+//        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+//        view.addSubview(activityIndicator)
+//        activityIndicator.startAnimating()
+        LoaderController.sharedInstance.showLoader()
     }
 //Drawing lines on image
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

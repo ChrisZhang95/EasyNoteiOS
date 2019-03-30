@@ -79,7 +79,7 @@ class SignInMenuViewController: UIViewController, LoginButtonDelegate {
         //Adding facebook button to the view
         let loginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends])
         loginButton.center = view.center
-        loginButton.frame = CGRect(x: view.frame.width * 0.15, y: emailSignUpButton.frame.origin.y + 60, width: view.frame.width * 0.7, height: emailSignUpButton.frame.height)
+        loginButton.frame = CGRect(x: view.frame.width * 0.15, y: emailSignUpButton.frame.origin.y + 80, width: view.frame.width * 0.7, height: emailSignUpButton.frame.height)
         loginButton.delegate = self
         view.addSubview(loginButton)
         

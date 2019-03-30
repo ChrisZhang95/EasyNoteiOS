@@ -9,6 +9,7 @@
 import UIKit
 
 class DocumentViewController: UIViewController {
+    //let indicator = LoaderController()
     //var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     @IBOutlet weak var textView: UITextView!
     
@@ -25,6 +26,7 @@ class DocumentViewController: UIViewController {
                 do{
                     //self.activityIndicator.stopAnimating()
                     // #4.2 - Display the document's file name.
+                    //LoaderController.sharedInstance.showLoader()
                     self.navigationItem.title = self.document?.fileURL.lastPathComponent
                     self.textView.text = try String(contentsOf: (self.document?.fileURL)!)
 
@@ -33,6 +35,7 @@ class DocumentViewController: UIViewController {
                     
                 }
             } else {
+                //LoaderController.sharedInstance.removeLoader()
                 // Make sure to handle the failed import appropriately, e.g., by presenting an error message to the user.
                 //stop the indicator
                 //self.activityIndicator.stopAnimating()
