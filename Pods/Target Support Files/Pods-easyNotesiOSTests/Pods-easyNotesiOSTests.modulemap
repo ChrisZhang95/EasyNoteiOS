@@ -1,0 +1,6 @@
+framework module Pods_easyNotesiOSTests {
+  umbrella header "Pods-easyNotesiOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

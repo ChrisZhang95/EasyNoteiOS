@@ -23,8 +23,9 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         //        print("URL: \(documentURL)")
         
         // Create UIImagePickerController on load up
-        imagePicker.delegate = self
         imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        
         setBackground()
     }
     
@@ -60,9 +61,14 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
+    
+    
     //Gets called after the image is picked
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+        
+        
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
             
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             if(imagePicker.sourceType == UIImagePickerControllerSourceType.camera){
@@ -78,6 +84,22 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
             
             
+        }
+            
+        else if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            if(imagePicker.sourceType == UIImagePickerControllerSourceType.camera){
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "takeNew") as! TakeNewNoteViewController
+                newViewController.img = image
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            }
+                
+            else{
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "import") as! ImportNoteViewController
+                newViewController.img = image
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            }
         }
         else{
             //Error message

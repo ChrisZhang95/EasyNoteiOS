@@ -15,7 +15,9 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         super.viewDidLoad()
         
         delegate = self
-        
+//        let height: CGFloat = 0 //whatever height you want to add to the existing height
+//        let bounds = self.navigationController!.navigationBar.bounds
+//        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
         allowsDocumentCreation = true
         allowsPickingMultipleItems = false
         
