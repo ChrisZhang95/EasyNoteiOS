@@ -17,6 +17,7 @@ class HTTPManager {
     var server: String
     var converTxt: String = "1"
     var vc: UIViewController? = nil
+    var indicator: UIActivityIndicatorView? = nil
     
     init() {
         //        self.server = "http://192.168.0.19:5000/"
@@ -58,10 +59,12 @@ class HTTPManager {
                             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                             let textViewController = storyBoard.instantiateViewController(withIdentifier: "textView") as! TextViewViewController
                             textViewController.text = utf8Text
+                            self.indicator?.stopAnimating()
                             self.vc?.navigationController?.pushViewController(textViewController, animated: true)
                         }
                     }
                 case .failure(let encodingError):
+                    self.indicator?.stopAnimating()
                     print(encodingError)
                     Toast.show(message: "Error!", controller: self.vc!)
                 }
