@@ -1,0 +1,6 @@
+framework module Pods_easyNotesiOSUITests {
+  umbrella header "Pods-easyNotesiOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
