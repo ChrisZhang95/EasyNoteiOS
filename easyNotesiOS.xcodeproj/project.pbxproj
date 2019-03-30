@@ -21,7 +21,6 @@
 		BD952E7320CF6069005BD858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7220CF6069005BD858 /* AppDelegate.swift */; };
 		BD952E7520CF6069005BD858 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E7420CF6069005BD858 /* MenuViewController.swift */; };
 		BD952E7A20CF6069005BD858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD952E7820CF6069005BD858 /* Main.storyboard */; };
-		BD952E7C20CF606B005BD858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD952E7B20CF606B005BD858 /* Assets.xcassets */; };
 		BD952E7F20CF606B005BD858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD952E7D20CF606B005BD858 /* LaunchScreen.storyboard */; };
 		BD952E8A20CF606B005BD858 /* easyNotesiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E8920CF606B005BD858 /* easyNotesiOSTests.swift */; };
 		BD952E9520CF606B005BD858 /* easyNotesiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD952E9420CF606B005BD858 /* easyNotesiOSUITests.swift */; };
@@ -31,6 +30,7 @@
 		BD9F4D5A20DEC3D4004CE8DD /* EmailSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9F4D5920DEC3D4004CE8DD /* EmailSignInViewController.swift */; };
 		BD9F4D5C20DED2C8004CE8DD /* SignInMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9F4D5B20DED2C8004CE8DD /* SignInMenuViewController.swift */; };
 		BDC6317120DC679400A19E67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC6317020DC679400A19E67 /* GoogleService-Info.plist */; };
+		BDD042AD224FC06D00DABF55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD042AC224FC06B00DABF55 /* Assets.xcassets */; };
 		BDE40ADD20D2B84E00329034 /* TakeNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE40ADC20D2B84E00329034 /* TakeNewNoteViewController.swift */; };
 		BDE40ADF20D2BBAE00329034 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE40ADE20D2BBAE00329034 /* UserViewController.swift */; };
 		F2C5A0EBC07B6FEC63C90B76 /* Pods_easyNotesiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6CAB70F8779E36BBEBDACF /* Pods_easyNotesiOSUITests.framework */; };
@@ -75,7 +75,6 @@
 		BD952E7220CF6069005BD858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD952E7420CF6069005BD858 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BD952E7920CF6069005BD858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BD952E7B20CF606B005BD858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD952E7E20CF606B005BD858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD952E8020CF606B005BD858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD952E8520CF606B005BD858 /* easyNotesiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = easyNotesiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +89,7 @@
 		BD9F4D5920DEC3D4004CE8DD /* EmailSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignInViewController.swift; sourceTree = "<group>"; };
 		BD9F4D5B20DED2C8004CE8DD /* SignInMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInMenuViewController.swift; sourceTree = "<group>"; };
 		BDC6317020DC679400A19E67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDD042AC224FC06B00DABF55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDE40ADC20D2B84E00329034 /* TakeNewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeNewNoteViewController.swift; sourceTree = "<group>"; };
 		BDE40ADE20D2BBAE00329034 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		E7C4A2A7FB186CC2952689CF /* Pods-easyNotesiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyNotesiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-easyNotesiOS/Pods-easyNotesiOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,12 +170,12 @@
 		BD952E7120CF6069005BD858 /* easyNotesiOS */ = {
 			isa = PBXGroup;
 			children = (
+				BDD042AC224FC06B00DABF55 /* Assets.xcassets */,
 				BD5BCDC5213B2269003DE2BE /* Models */,
 				BDC6317020DC679400A19E67 /* GoogleService-Info.plist */,
 				BD952EA220CF609C005BD858 /* ViewControllers */,
 				BD952E7220CF6069005BD858 /* AppDelegate.swift */,
 				BD952E7820CF6069005BD858 /* Main.storyboard */,
-				BD952E7B20CF606B005BD858 /* Assets.xcassets */,
 				BD952E7D20CF606B005BD858 /* LaunchScreen.storyboard */,
 				BD952E8020CF606B005BD858 /* Info.plist */,
 			);
@@ -343,7 +343,7 @@
 			files = (
 				BD952E7F20CF606B005BD858 /* LaunchScreen.storyboard in Resources */,
 				BDC6317120DC679400A19E67 /* GoogleService-Info.plist in Resources */,
-				BD952E7C20CF606B005BD858 /* Assets.xcassets in Resources */,
+				BDD042AD224FC06D00DABF55 /* Assets.xcassets in Resources */,
 				BD952E7A20CF6069005BD858 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,7 +706,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E7C4A2A7FB186CC2952689CF /* Pods-easyNotesiOS.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P99428PPVG;
@@ -728,7 +728,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A0C528C563E03907395B699 /* Pods-easyNotesiOS.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P99428PPVG;

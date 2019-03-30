@@ -23,9 +23,14 @@ class HTTPManager {
         //        self.server = "http://192.168.0.19:5000/"
         //        self.server = "http://100.65.197.192:5000/"
         let defaults = UserDefaults.standard
-        let ipAddress = defaults.object(forKey: "ipAddress") as! String
-        self.server = "http://" + ipAddress + ":5000/"
-        print (self.server + "!!!!!!!!!")
+        let ipAddress = defaults.object(forKey: "ipAddress") as? String
+        
+        if(ipAddress != nil){
+            self.server = "http://" + ipAddress! + ":5000/"
+        }
+        else{
+            self.server = "http://196.168.0.13:5000/"
+        }
     }
     
     //override IP address
