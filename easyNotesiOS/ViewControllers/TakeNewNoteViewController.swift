@@ -54,7 +54,6 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
         let manager = HTTPManager.init()
         manager.vc = self
         manager.postImage(image: myImg.image!)
-        //manager.indicator = activityIndicator
 
         activityIndicator.center = self.view.center
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
@@ -71,7 +70,6 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("Reappeared!!!!!!!!!!")
         activityIndicator.stopAnimating()
     }
     /*

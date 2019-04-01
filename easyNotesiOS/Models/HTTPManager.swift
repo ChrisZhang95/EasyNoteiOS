@@ -64,6 +64,7 @@ class HTTPManager {
                             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                             let textViewController = storyBoard.instantiateViewController(withIdentifier: "textView") as! TextViewViewController
                             textViewController.text = utf8Text
+                            textViewController.img = image
 //                            self.indicator!.stopAnimating()
                             self.vc?.navigationController?.pushViewController(textViewController, animated: true)
                         }

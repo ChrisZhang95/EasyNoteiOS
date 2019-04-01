@@ -8,17 +8,19 @@
 
 import UIKit
 
-class TextViewViewController: UIViewController {
+class TextViewViewController: UIViewController, UITextFieldDelegate {
     
     var text: String?
-    
+    var img:UIImage?
     @IBOutlet var textView: UITextView!
     
+    @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         textView.text = text
+        imgView.image = self.img
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonClick))
         
         
@@ -77,6 +79,10 @@ class TextViewViewController: UIViewController {
         catch {
         Toast.show(message: error as! String, controller: self)
         }
+    }
+        
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textView.resignFirstResponder()
     }
     /*
     // MARK: - Navigation
