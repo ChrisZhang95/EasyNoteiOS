@@ -22,7 +22,7 @@ class TextViewViewController: UIViewController, UITextFieldDelegate {
         textView.text = text
         imgView.image = self.img
         
-        let shareButton = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareButtonClick))
+        let shareButton = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(shareButtonClick))
         
         let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonClick))
         

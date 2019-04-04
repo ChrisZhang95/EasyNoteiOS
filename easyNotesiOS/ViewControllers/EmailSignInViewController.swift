@@ -23,6 +23,7 @@ class EmailSignInViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error == nil && user != nil{
                 print("\nUser logged in\n")
+                self.performSegue(withIdentifier: "menu", sender: nil) //Segue has to be set to "Present Modally"
             }
             else{
                 print("\nFailed to log in\n")

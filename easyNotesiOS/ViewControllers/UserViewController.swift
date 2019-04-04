@@ -33,6 +33,7 @@ class UserViewController: UIViewController {
         loginManager.logOut()
         defaults.set(nil, forKey:"firstName")
         defaults.set(nil, forKey:"lastName")
+        defaults.set(nil, forKey:"picture")
         
         let nextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "userSignIn") as! UINavigationController
         
@@ -55,7 +56,9 @@ class UserViewController: UIViewController {
             let name = firstName! + " " + lastName!
             userNameText.text = name
         }
-        
+        else{
+            userNameText.text = ""
+        }
         
         //Display user profile
         let picture = defaults.object(forKey: "picture") as? Dictionary<String, AnyObject>
@@ -74,7 +77,9 @@ class UserViewController: UIViewController {
                 }
             }
         }
-        
+        else{
+            self.image.image = UIImage(named: "icons8-customer-filled-100")
+        }
         setBackground()
         
     }

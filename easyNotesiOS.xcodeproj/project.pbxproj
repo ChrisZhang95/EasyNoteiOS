@@ -706,7 +706,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E7C4A2A7FB186CC2952689CF /* Pods-easyNotesiOS.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P99428PPVG;
@@ -728,7 +728,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A0C528C563E03907395B699 /* Pods-easyNotesiOS.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P99428PPVG;

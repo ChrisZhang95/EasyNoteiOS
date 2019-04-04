@@ -112,7 +112,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x57-3a-LLT" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
                                 <rect key="frame" x="179.66666666666666" y="661" width="55" height="55"/>
-                                <color key="backgroundColor" red="0.96470588239999999" green="0.65490196079999996" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="HIG-T8-q2N"/>
                                     <constraint firstAttribute="height" constant="55" id="e3n-ox-qbd"/>
@@ -204,7 +204,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-UB-jhg" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
                                 <rect key="frame" x="179.66666666666666" y="661" width="55" height="55"/>
-                                <color key="backgroundColor" red="0.96470588239999999" green="0.65490196079999996" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="lLd-Ef-QPX"/>
                                     <constraint firstAttribute="width" constant="55" id="r9O-mB-cC1"/>
@@ -851,6 +851,6 @@
         <image name="notes" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bSu-Kk-e32"/>
+        <segue reference="zQR-8f-g9O"/>
     </inferredMetricsTieBreakers>
 </document>

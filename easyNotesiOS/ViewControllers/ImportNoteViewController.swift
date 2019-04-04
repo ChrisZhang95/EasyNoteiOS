@@ -59,7 +59,7 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
-        _ = navigationController?.popViewController(animated: true)
+//        _ = navigationController?.popViewController(animated: true)
     }
     
     //On share button click

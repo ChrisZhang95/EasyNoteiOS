@@ -18,7 +18,7 @@ class DocumentViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        let shareButton = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareButtonClick))
+        let shareButton = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(shareButtonClick))
         
         self.navigationItem.rightBarButtonItem = shareButton
         
