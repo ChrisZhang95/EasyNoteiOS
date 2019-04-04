@@ -17,6 +17,11 @@ class DocumentViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        let shareButton = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareButtonClick))
+        
+        self.navigationItem.rightBarButtonItem = shareButton
+        
         super.viewWillAppear(animated)
         //self.navigationItem.title = self.document?.localizedName;
         
@@ -43,6 +48,12 @@ class DocumentViewController: UIViewController {
         })
     }
 
+    //On share button click
+    @objc func shareButtonClick() {
+        //Share image
+        let activityController = UIActivityViewController(activityItems: [self.textView.text], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+    }
     
     @IBAction func dismissDocumentViewController() {
         dismiss(animated: true) {

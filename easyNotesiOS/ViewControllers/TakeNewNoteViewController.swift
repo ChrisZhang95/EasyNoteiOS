@@ -15,40 +15,33 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //Display share button on top right
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareButtonClick))
+       
+        navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(shareButtonClick))
         
         myImg.image = img
-//        // Create UIImagePickerController on load up
-//        let image = UIImagePickerController()
-//        image.delegate = self
-//        image.sourceType = UIImagePickerControllerSourceType.camera
-//        image.allowsEditing = true
-//
-//        //Present UIImagePickerController on UI
-//        self.present(image, animated: true){
-//            //After it is complete
-//        }
+        
     }
     
-//    //Gets called after the image is picked
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
-//            myImg.image = image
-//            //sharedImg = image
-//        }
-//        else{
-//            //Error message
-//        }
-//
-//        self.dismiss(animated: true, completion: nil)
-//    }
-//    
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//        self.dismiss(animated: true, completion: nil)
-//        _ = navigationController?.popViewController(animated: true)
-//    }
+    //Gets called after the image is picked
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
+                self.myImg.image = image
+        }
+            
+        else{
+            //Error message
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
+    }
 
     @IBAction func convertText(_ sender: Any) {
         let manager = HTTPManager.init()
@@ -63,10 +56,16 @@ class TakeNewNoteViewController: UIViewController, UIImagePickerControllerDelega
     
     //On share button click
     @objc func shareButtonClick() {
-        //activityIndicator.stopAnimating()
-        //Share image
-        let activityController = UIActivityViewController(activityItems: [myImg.image!], applicationActivities: nil)
-        present(activityController, animated: true, completion: nil)
+        // Create UIImagePickerController on load up
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.camera
+        image.allowsEditing = true
+        
+        //Present UIImagePickerController on UI
+        self.present(image, animated: true){
+            //After it is complete
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -21,7 +21,14 @@ class TextViewViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         textView.text = text
         imgView.image = self.img
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonClick))
+        
+        let shareButton = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareButtonClick))
+        
+        let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonClick))
+        
+        self.navigationItem.rightBarButtonItems = [saveButton, shareButton]
+        
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonClick))
         
         
     }
@@ -29,6 +36,13 @@ class TextViewViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //On share button click
+    @objc func shareButtonClick() {
+        //Share image
+        let activityController = UIActivityViewController(activityItems: [self.text ?? ""], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
     }
     
     //On save button click

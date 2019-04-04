@@ -27,7 +27,7 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewDidLoad()
         
         //Display share button on top right
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareButtonClick))
+        navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(shareButtonClick))
         
         myImg.image = img
         
@@ -43,28 +43,37 @@ class ImportNoteViewController: UIViewController, UIImagePickerControllerDelegat
 //        }
     }
 
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//        self.dismiss(animated: true, completion: nil)
-//        _ = navigationController?.popViewController(animated: true)
-//    }
-//    
-//    //Gets called after the image is picked
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
-//            myImg.image = image
-//        }
-//        else{
-//            //Error message
-//        }
-//        
-//        self.dismiss(animated: true, completion: nil)
-//    }
+    //Gets called after the image is picked
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
+            self.myImg.image = image
+        }
+            
+        else{
+            //Error message
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
+    }
     
     //On share button click
     @objc func shareButtonClick() {
-        //Share image
-        let activityController = UIActivityViewController(activityItems: [myImg.image!], applicationActivities: nil)
-        present(activityController, animated: true, completion: nil)
+        // Create UIImagePickerController on load up
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        image.allowsEditing = true
+        
+        //Present UIImagePickerController on UI
+        self.present(image, animated: true){
+            //After it is complete
+        }
     }
     
     //Convert text by sending http request to server
