@@ -110,14 +110,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x57-3a-LLT" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                <rect key="frame" x="179.66666666666666" y="661" width="55" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x57-3a-LLT">
+                                <rect key="frame" x="0.0" y="661" width="414" height="75"/>
                                 <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="HIG-T8-q2N"/>
-                                    <constraint firstAttribute="height" constant="55" id="e3n-ox-qbd"/>
+                                    <constraint firstAttribute="height" constant="75" id="e3n-ox-qbd"/>
                                 </constraints>
-                                <state key="normal" image="icons8-synchronize-filled-50">
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Convert">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -129,17 +129,18 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-zc-e5j">
-                                <rect key="frame" x="5" y="40" width="404" height="601"/>
+                                <rect key="frame" x="5" y="40" width="404" height="621"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="top" secondItem="Ptd-w5-1Kp" secondAttribute="top" constant="20" id="2kN-Rn-vfB"/>
+                            <constraint firstItem="x57-3a-LLT" firstAttribute="width" secondItem="Ptd-w5-1Kp" secondAttribute="width" id="K8g-MH-4O5"/>
                             <constraint firstItem="x57-3a-LLT" firstAttribute="centerX" secondItem="hQ4-o4-8YM" secondAttribute="centerX" id="ann-ZU-dS7"/>
                             <constraint firstItem="Ptd-w5-1Kp" firstAttribute="trailing" secondItem="sUF-zc-e5j" secondAttribute="trailing" constant="5" id="cYI-eF-KhM"/>
-                            <constraint firstItem="Ptd-w5-1Kp" firstAttribute="bottom" secondItem="x57-3a-LLT" secondAttribute="bottom" constant="20" id="fJZ-8g-9hx"/>
+                            <constraint firstItem="Ptd-w5-1Kp" firstAttribute="bottom" secondItem="x57-3a-LLT" secondAttribute="bottom" id="fJZ-8g-9hx"/>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="centerX" secondItem="hQ4-o4-8YM" secondAttribute="centerX" id="gX7-Yx-CBb"/>
-                            <constraint firstItem="x57-3a-LLT" firstAttribute="top" secondItem="sUF-zc-e5j" secondAttribute="bottom" constant="20" id="mFN-6E-bSd"/>
+                            <constraint firstItem="x57-3a-LLT" firstAttribute="top" secondItem="sUF-zc-e5j" secondAttribute="bottom" id="mFN-6E-bSd"/>
                             <constraint firstItem="sUF-zc-e5j" firstAttribute="leading" secondItem="Ptd-w5-1Kp" secondAttribute="leading" constant="5" id="vTV-HP-ICg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ptd-w5-1Kp"/>
@@ -202,15 +203,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-UB-jhg" customClass="RoundButton" customModule="easyNotesiOS" customModuleProvider="target">
-                                <rect key="frame" x="179.66666666666666" y="661" width="55" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-UB-jhg">
+                                <rect key="frame" x="0.0" y="661" width="414" height="75"/>
                                 <color key="backgroundColor" red="0.39744070479999999" green="0.68187938950000004" blue="0.99682237689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="lLd-Ef-QPX"/>
-                                    <constraint firstAttribute="width" constant="55" id="r9O-mB-cC1"/>
+                                    <constraint firstAttribute="height" constant="75" id="lLd-Ef-QPX"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="Bgk-Du-jr7"/>
-                                <state key="normal" image="icons8-synchronize-filled-50">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Convert">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -222,18 +223,19 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JsW-2V-bf2" userLabel="myImg">
-                                <rect key="frame" x="5" y="50" width="404" height="591"/>
+                                <rect key="frame" x="5" y="50" width="404" height="611"/>
                                 <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fPG-UB-jhg" firstAttribute="centerX" secondItem="qET-ah-qSb" secondAttribute="centerX" id="3KL-lI-GuH"/>
-                            <constraint firstItem="MgZ-mq-I87" firstAttribute="bottom" secondItem="fPG-UB-jhg" secondAttribute="bottom" constant="20" id="4M1-Jb-1oY"/>
+                            <constraint firstItem="MgZ-mq-I87" firstAttribute="bottom" secondItem="fPG-UB-jhg" secondAttribute="bottom" id="4M1-Jb-1oY"/>
                             <constraint firstItem="JsW-2V-bf2" firstAttribute="centerX" secondItem="qET-ah-qSb" secondAttribute="centerX" id="5zT-MO-JO9"/>
                             <constraint firstItem="JsW-2V-bf2" firstAttribute="top" secondItem="MgZ-mq-I87" secondAttribute="top" constant="30" id="IZx-zq-1As"/>
+                            <constraint firstItem="fPG-UB-jhg" firstAttribute="width" secondItem="MgZ-mq-I87" secondAttribute="width" id="Uco-QN-TjO"/>
                             <constraint firstItem="MgZ-mq-I87" firstAttribute="trailing" secondItem="JsW-2V-bf2" secondAttribute="trailing" constant="5" id="aJw-AG-n6D"/>
-                            <constraint firstItem="fPG-UB-jhg" firstAttribute="top" secondItem="JsW-2V-bf2" secondAttribute="bottom" constant="20" id="mxf-wV-Bzz"/>
+                            <constraint firstItem="fPG-UB-jhg" firstAttribute="top" secondItem="JsW-2V-bf2" secondAttribute="bottom" id="mxf-wV-Bzz"/>
                             <constraint firstItem="JsW-2V-bf2" firstAttribute="leading" secondItem="MgZ-mq-I87" secondAttribute="leading" constant="5" id="pax-TB-WO7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MgZ-mq-I87"/>
@@ -845,7 +847,6 @@
         <image name="icons8-photo-gallery-filled-60" width="154.28572082519531" height="154.28572082519531"/>
         <image name="icons8-slr-camera-60 (1)" width="154.28572082519531" height="154.28572082519531"/>
         <image name="icons8-street-view-30" width="22.5" height="22.5"/>
-        <image name="icons8-synchronize-filled-50" width="156.52174377441406" height="156.52174377441406"/>
         <image name="icons8-task-30" width="22.5" height="22.5"/>
         <image name="logout" width="512" height="512"/>
         <image name="notes" width="1200" height="1200"/>
